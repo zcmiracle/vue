@@ -1,2 +1,2 @@
 # vue
-vue学些
+vue学习
