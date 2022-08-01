@@ -21,12 +21,14 @@
 
     <script src="../js/vue.js"></script>
     <script>
+        const obj = {
+            counter: 0
+        }
+
         // 语法糖：简写
         const app = new Vue({
             el: '#app',
-            data: {
-                counter: 0
-            },
+            data: obj,
             methods: {
                 increment() {
                     this.counter++
