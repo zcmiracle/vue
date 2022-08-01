@@ -1,3 +1,5 @@
 {
-    "editor.scrollbar.verticalScrollbarSize": 16
+    "editor.scrollbar.verticalScrollbarSize": 16,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false
 }

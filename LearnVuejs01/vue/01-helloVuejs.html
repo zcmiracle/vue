@@ -5,14 +5,15 @@
   <meta charset="UTF-8">
   <title>初识Vue</title>
 </head>
+
 <body>
 
-<div id="app">{{message}}</div>
-<script type="text/javascript" src="../js/vue.js"></script>
+  <div id="app">{{message}}</div>
+  <script type="text/javascript" src="../js/vue.js"></script>
 
-<script>
-  Vue.config.productionTip = false
-   const app = new Vue({
+  <script>
+    Vue.config.productionTip = false
+    const app = new Vue({
       el: "#app",
       data: {
         message: "fearless"
@@ -21,4 +22,5 @@
   </script>
 
 </body>
+
 </html>

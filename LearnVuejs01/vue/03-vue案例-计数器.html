@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <h2>当前计数：{{counter}}</h2>
@@ -36,15 +38,35 @@
                 decrement() {
                     this.counter--
                 }
+
+                // 方法 有this，this和实例对象挂钩的
                 // add: function() {
                 //     console.log('add被执行');
+                //     this.counter++ 
                 // },
                 // sub: function() {
-                //     console.log('sub被执行');
+                //     console.log('sub被执行'); 
+                //     this.counter--  
                 // }
             },
         })
+
+        // Vue实例传入的options
+        // el:
+        // 类型：String | HTMLElement
+        // 作用：决定之后Vue实例会管理哪一个DOM。
+
+        // data:
+        // 类型：Object | Function 组件当中data必须是一个函数
+        // 作用：Vue实例对应的数据对象。
+
+        // methods
+        // 类型：{[key: string] : Function }
+        // 作用：定义属于Vue的一些方法，可以在其他地方调用，也可以在指令中使用。
+        // 方法和实例对象挂钩的，方法和函数还是不一样的
+
     </script>
 
 </body>
+
 </html>
