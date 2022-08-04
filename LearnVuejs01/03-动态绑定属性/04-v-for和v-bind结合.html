@@ -11,8 +11,10 @@
 <body>
 
   <div id="app">
-    <h2 class="title" :class="[active, line]">{{message}}</h2>
-    <h2 class="title" :class="getClasses()">{{message}}</h2>
+    <ul>
+      <!-- <li v-for="m in movies">{{m}}</li> -->
+      <li v-for="(m, index) in movies">{{index}}-{{m}}</li>
+    </ul>
   </div>
 
   <script src="../js/vue.js"></script>
@@ -20,17 +22,11 @@
     const app = new Vue({
       el: '#app',
       data: {
-        message: 'hello world',
-        active: 'aaaaaa',
-        line: 'bbbbbb'
-      },
-      methods: {
-        getClasses: function () {
-          return [this.active, this.line]
-        }
-      },
+        movies: ['海贼王', '吞噬星空', '一念永恒', '斗罗大陆', '斗破苍穹']
+      }
     })
   </script>
+
 
 </body>
 
