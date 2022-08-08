@@ -11,6 +11,11 @@
 <body>
 
   <div id="app">
+    <!-- 如果不希望Vue出现类似重复利用问题，可以给对应的input添加key -->
+    <!-- 并且我们需要保证key的不同 -->
+
+
+    <!-- key的作用主要是为了高效的更新虚拟DOM -->
     <ul>
       <li v-for="item in letters" :key="item">{{item}}</li>
     </ul>
