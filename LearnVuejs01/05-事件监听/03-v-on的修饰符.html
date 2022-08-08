@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- 1/.stop修饰符的使用（停止冒泡） -->
+    <div @click="divClick">
+      div标签标签
+      <button @click="btnClick">按钮</button>
+      <button @click.stop="btnClick">按钮</button>
+    </div>
+
+    <br>
+    
+    <!-- 2. .prevent修饰符的使用（阻止默认行为） -->
+    <form action="baidu">
+      <input type="submit" value="提交" @click.prevent="submitClick">
+    </form>
+    
+    <!-- 3. 监听某个键盘的键帽（keyCode | keyAlias）只当事件是从特定键触发伤害才能触发回调 -->
+    <input type="text" @keyup.enter="keyUp">
+
+    <!-- 4. .once修饰符的使用（只触发一次回调） -->
+    <button @click.once="btnClick2">按钮2</button>
+
+    <!-- 5. 监听组件根元素的原生事件 -->
+    
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world'
+      },
+      methods: {
+        btnClick() {
+          console.log("btnClick");
+        },
+        divClick() {
+          console.log("divClick1");
+        },
+        submitClick() {
+          console.log("submitClick");
+        },
+        keyUp() {
+          console.log("keyUp");
+        },
+        btnClick2() {
+          console.log("btnClick2");
+        }
+      },
+    })
+  </script>
+
+
+</body>
+
+</html>
