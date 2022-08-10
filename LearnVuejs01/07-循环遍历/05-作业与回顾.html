@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="app">
+    <ul>
+      <!-- <li v-for="(item, index) in names" 
+          :class="{active: currentIndex === index}" 
+          @click="nameClick(index)">
+        {{index}}.{{item}}
+      </li> -->
+
+      <li v-for="(item, index) in names" v-bind:class="{active: currentIndex === index}" v-on:click="nameClick(index)">
+        {{index}}.{{item}}
+      </li>
+    </ul>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        names: ['LeBron James', 'Jordan', 'Huohua', 'Paul'],
+        currentIndex: 0
+      },
+      methods: {
+         nameClick(index) {
+          this.currentIndex = index
+         }
+      },
+    })
+  </script>
+
+
+</body>
+
+</html>
