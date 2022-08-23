@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- <input type="text" v-model="message"> -->
+    <input type="text" v-bind:value="message" v-on:input="valueChange">
+    <!-- <input type="text" :vaule="message" @input="valueChange"> -->
+    <!-- <input type="text" :value="message" @input="message = $event.target.value"> -->
+    <h2>{{message}}</h2>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world'
+      },
+      methods: {
+         valueChange(event) {
+          this.message = event.target.value;
+         }
+      },
+    })
+  </script>
+
+
+
+
+</body>
+
+</html>
