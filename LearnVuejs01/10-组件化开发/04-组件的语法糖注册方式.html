@@ -10,8 +10,13 @@
 
 <body>
 
+  <!-- 1、Vue为了简化这个过程，提供了注册的语法糖 -->
+  <!-- 2、主要是省去了Vue.extend()的步骤，而是可以直接使用一个对象来代替 -->
+  
   <div id="app">
-    <cpn1></cpn1>
+    <!-- 全局组件语法糖 -->
+    <cpn1></cpn1> 
+    <!-- 局部组件语法糖 -->
     <cpn2></cpn2>
   </div>
 
@@ -19,8 +24,16 @@
   <script>
     // 1、全局组件注册的语法糖
     // 1、创建组件构造器
-    // const cpn1 = Vue.extend()
+    // const cpn1 = Vue.extend({
+    //   template: `
+    //     <div>
+    //       <h2>我是标题</h2>
+    //       <p>我是内容，哈哈哈</p>  
+    //     </div>
+    //   `
+    // })
 
+    // const cpn1 = Vue.extend()
     // 2、注册组件
     Vue.component('cpn1', {
       template: `
