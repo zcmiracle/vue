@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <cpn v-bind:cmessage="message" v-bind:comvies="movies"></cpn>
+    <!-- <cpn :cmessage="message" :cmovies="movies"></cpn> -->
+  </div>
+
+  <template id="cpn">
+    <div>
+      <ul>
+        <li v-for="item in cmovies">{{item}}</li>
+      </ul>
+      <h2>{{cmessage}}</h2>
+    </div>
+  </template>
+
+  <script src="../js/vue.js"></script>
+  <script>
+
+    // 父传子：props
+    const cpn = {
+      template: '#cpn',
+      props: {
+        // 1、类型限制
+        // cmovies: Array
+        // cmessage: String
+
+        // 2、提供一些默认值，以及必传值
+        cmessage: {
+          type: String,
+          default: '123456',
+          required: true
+        },
+        // 类型是对象或者数组时，默认值必须是一个函数
+        cmovies: {
+          type: Array,
+          default() {
+            return []
+          }
+        }
+      },
+      data() {
+        return {
+
+        }
+      },
+      methods: {
+         
+      },
+    }
+
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world',
+        movies: ['海王', '海贼王', '海尔兄弟']
+      },
+      components: {
+        cpn
+      }
+    })
+  </script>
+
+
+</body>
+
+</html>
