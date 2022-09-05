@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- <cpn v-on:item-click="cpnClick"></cpn> -->
+    <cpn @item-click="cpnClick"></cpn>
+  </div>
+
+  <template id="cpn">
+    <div>
+      <button v-for="item in categories" @click="btnClick(item)">{{item.name}}</button>
+    </div>
+  </template>
+  
+  <script src="../js/vue.js"></script>
+  <script>
+
+     // 自定义事件流程
+     // 1、子组件中，通过$emit() 来触发事件
+     // 2、在父组件中，通过v-on监听子组件事件
+
+    // 1、子组件
+    const cpn = {
+      template: '#cpn',
+      data() {
+        return {
+          categories: [
+            {id: '111', name: '消费热点'},
+            {id: '222', name: '产品评测'},
+            {id: '333', name: '消费资讯'},
+          ]
+        }
+      },
+      methods: {
+        btnClick(item) {
+          // 发射事件：自定义事件
+          this.$emit('item-click', item)
+        }
+      }
+    }
+
+    // 2、父组件
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: 'hello world'
+      },
+      components: {
+        cpn
+      },
+      methods: {
+        cpnClick(item) {
+          console.log('cpnClick', item);
+        }
+      },
+    })
+  </script>
+
+
+
+</body>
+
+</html>
