@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+
+    a {
+      display: inline-block;
+    }
+
+    .item {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .item .ablum img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .item .info a {
+      width: 100%;
+    }
+    
+    .item .info p {
+      font-size: 15px;
+      margin-top: 8px;
+
+      /* white-space: nowrap; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .item .info .anchor {
+      font-size: 13px;
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .item .info .anchor::before {
+      content: url(images/widget-up.svg);
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      position: relative;
+      top: 2px;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="item">
+    <div class="ablum">
+      <a href="https://www.bilibili.com/video/BV1ua41137vg?spm_id_from=333.337">
+        <img src="https://i1.hdslb.com/bfs/archive/74643887b9052b87a24475a414f473bd98aa58cf.jpg@336w_190h_1c_!web-rec-list" referrerpolicy="no-referrer" alt="">
+      </a>
+    </div>
+    <div class="info">
+      <a href="https://www.bilibili.com/video/BV1ua41137vg?spm_id_from=333.337">
+        <p>“你和晚风，我都想揽入怀里！你和晚风，我都想揽入怀里”</p>
+      </a>
+      <a class="anchor" href="https://space.bilibili.com/516006002">
+        <span class="nickname">丑孩子的春天</span>
+        <span class="time">9-13</span>
+      </a>
+    </div>
+  </div>
+
+
+</body>
+</html>
