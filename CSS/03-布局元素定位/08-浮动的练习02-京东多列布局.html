@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 公共布局 */
+    .content {
+      width: 1190px;
+      height: 800px;
+
+      margin: 0 auto;
+      background-color: orange;
+    }
+
+    /* 布局样式 */
+    .item {
+      width: 230px;
+      height: 322px;
+      background-color: red;
+
+      /* 浮动 */
+      float: left;
+      margin-right: 10px;
+      /* margin: 0 5px;  */
+    } 
+
+    /* .item:nth-child(5n) {
+      margin-right: 0;
+    } */
+
+    .box {
+      /* margin: 0 -5px; */
+      /* 方案3 设置负的margin 没有兼容性 */
+      margin-right: -10px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="content">
+    <div class="box">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+    </div>
+  </div>
+
+
+</body>
+</html>
