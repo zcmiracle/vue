@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .item {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+    }   
+
+    .box1 {
+      left: 0;
+      top: 0;
+      background-color: #f00;
+    }
+
+    .box2 {
+      left: 20px;
+      top: 20px;
+      background-color: #0f0;
+      z-index: 1;
+    }
+
+    .box3 {
+      left: 40px;
+      top: 40px;
+      background-color: #00f;
+    }
+
+    .info {
+      position: absolute;
+      z-index: 999;
+    }
+
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="item box1">1</div>
+  <div class="container">
+    <div class="item box2">
+      <div class="info">哈哈哈</div>
+    </div>
+  </div>
+  <div class="item box3">3</div>
+</body>
+</html>

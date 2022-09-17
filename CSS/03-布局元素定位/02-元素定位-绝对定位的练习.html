@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .item {
+      width: 140px;
+      margin: 0 auto
+    }
+
+    .item .top {
+      background-color: #f00;
+      position: relative;
+    }
+
+    .item .top img {
+      /* 去除图片下面多出来的区域 */
+      /* vertical-align: top; */
+      display: block;
+    }
+
+    .item .top .cover {
+      /* width: 140px;
+      height: 140px; */
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url(../images/music_sprite_01.png);
+      background-position: 0 0;
+    }
+
+    .item .top .info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 27px;
+      line-height: 27px;
+      padding-left: 10px;
+      font-size: 12px;
+      color: #ccc;
+
+      background-image: url(../images/music_sprite_01.png);
+      background-position: 0 -537px;
+    }
+
+    .item .top .info .icon-music {
+      position: relative;
+      top: 1px;
+  
+      display: inline-block; 
+      width: 14px;
+      height: 11px; 
+      background-image: url(../images/music_sprite_02.png);
+      background-position: 0 -24px;
+    }
+
+    .item .top .info .count {
+      margin-left: 4px;
+    }
+
+    .item .top .info .icon-play {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+
+      display: inline-block;
+      width: 16px;
+      height: 17px;
+      background-image: url(../images/music_sprite_02.png);
+      background-position: 0 0;
+    }
+
+    .item .bottom {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    .item .bottom:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="item">
+    <div class="top">
+      <img src="../images/music_album01.jpg" alt="音乐封面">
+      <a class="cover" href="#"></a>
+      <div class="info">
+        <i class="icon-music"></i>
+        <span class="count">62万</span>
+        <i class="icon-play"></i>
+      </div>
+    </div>
+    <a class="bottom" href="#">
+      天气好的话，把耳机分给我一半吧
+    </a>
+  </div>
+
+</body>
+</html>

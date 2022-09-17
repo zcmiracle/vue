@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+   
+    ul > li {
+      /* margin: 30px, 0; */
+      margin-top: 18px;
+    }
+
+    ul > li > a {
+      display: inline-block;
+    }
+
+    ul > li > a:hover {
+      color: #ef9800
+    }
+
+    ul > li .ranking {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 3px;
+      text-align: center;
+      line-height: 24px;
+      font-weight: 700;
+      color: #999;
+    }
+
+    /**  伪类：结构伪类  */
+    ul > li:nth-child(1) .ranking {
+      color: red;
+    }
+
+    ul > li:nth-child(2) .ranking {
+      color: #0f0;
+    }
+
+    ul > li:nth-child(3) .ranking {
+      color: #00f;
+    }
+
+
+    ul > li .content {
+      display: inline;
+    }
+
+    ul > li .icon {
+      position: relative;
+      top: 2px;
+      left: 4px;
+      
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+
+    ul > li .new {
+      background-image: url(../images/new_icon.svg);
+    }
+
+    ul > li .hot {
+      background-image: url(../images/hot_icon.svg);
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <ul>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          习近平抵达哈萨克斯坦
+        </div>
+        <i class="icon hot"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">2</span>
+        <div class="content">
+          瑞典首相安德松宣布辞职
+        </div>
+        <i class="icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">3</span>
+        <div class="content">
+          为什么银行纷纷下调个人存款利率
+        </div>
+        <i class="icon new"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">4</span>
+        <div class="content">
+          共享发展成果 互鉴发展经验
+        </div>
+        <i class="icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">5</span>
+        <div class="content">
+          乌克兰总统泽连斯基发生交通事故
+        </div>
+        <i class="icon new"></i>
+      </a>
+    </li>
+  </ul>
+  
+</body>
+</html>
