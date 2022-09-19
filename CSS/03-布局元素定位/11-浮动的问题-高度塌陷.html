@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .content {
+      width: 1190px;
+      margin: 0 auto;
+      background: #f00;
+    }
+
+    .wrapper {
+      margin-right: -10px;
+    }
+
+    .item {
+      width: 290px;
+      background-color: purple;
+      margin-bottom: 10px;
+
+      float: left;
+      margin-right: 10px;
+    }
+
+    .item.left {
+      height: 370px;
+    }
+
+    .item.right {
+      height: 180px;
+    }
+
+    .other {
+      height: 100px;
+      background: #0f0;
+    }
+
+    .line {
+      clear: both;
+    }
+
+    /* 最终解决方案 */
+    .clear_fix::after {
+      content: "";
+      clear: both;
+      display: block;
+
+      visibility: hidden;
+      height: 0;
+    }
+    /* 兼容IE6/7 */
+    .clear_fix {
+      *zoom: 1;
+    }
+
+  </style>
+
+</head>
+<body>
+  <!-- .item.left*2+.item.right*4 -->
+
+  <!-- 因为所有的后代item元素都是浮动的, 脱离标准流 -->
+  <!-- 不会向父元素汇报高度, 那么content元素压根就没有高度 -->
+  <div class="content">
+    <div class="wrapper clear_fix">
+      <div class="item left"></div>
+      <div class="item left"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+
+      <!-- <div class="line"></div> -->
+    </div>
+  </div>
+
+  <!-- 
+    浮动的元素脱离标准流，不会给父元素汇报高度
+    那么content元素压根就没有高度
+  -->
+  <div class="other"></div>
+
+</body>
+</html>
