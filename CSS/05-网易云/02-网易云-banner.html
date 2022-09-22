@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>网易云-轮播图</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <style>
+    .banner {
+      background: url(./images/banner_bg_02.jpeg) center center / 6000px;
+    }
+
+    .banner .area {
+      position: relative;
+      height: 285px;
+      background-color: orange;
+    }
+
+    .banner .area .area-left {
+      position: relative;
+      width: 730px;
+    }
+
+    /* banner */
+    .banner .area-left .img-list {
+      display: flex;
+      overflow: hidden;
+    }
+
+    .banner .area-left .img-list li {
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .banner .area-left .img-list .item {
+      display: block;
+    }
+
+    .banner .area-left .img-list .item img {
+      width: 100%;
+      height: 285px;
+    }
+
+    /* pageControl */
+    .banner .area-left .dots-list {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .banner .area-left .dots-list li {
+      margin: 0 2px;
+    }
+
+    .banner .area-left .dots-list .item {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url(./images/banner_sprite.png) 3px -343px;
+    }
+
+    .banner .area-left .dots-list .item.active,
+    .banner .area-left .dots-list .item:hover {
+      background-position: -16px -343px;
+    }
+
+    /* 右侧的内容 */
+    .banner .area-right {
+      position: absolute;
+      right: -1px;
+      top: 0;
+      bottom: 0;
+      width: 254px;
+      background: url(./images/download_sprite.png);
+    }
+
+    .banner .area-right .download {
+      display: block;
+      width: 215px;
+      height: 56px;
+      margin: 186px 0 0 19px;
+      text-indent: -9999px;
+    }
+
+    .banner .area-right .download:hover {
+      background: url(./images/download_sprite.png) 0 -290px;
+    }
+
+    .banner .area-right .desc {
+      margin-top: 10;
+      text-align: center;
+      font-size: 12px;
+      color: #8d8d8d;
+    }
+
+    /* 左右两个控制按钮 */
+    .banner .area .control {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 37px;
+      height: 63px;
+      margin: auto 0;
+      background-image: url(./images/banner_sprite.png);
+    }
+
+    .banner .area .control.left {
+      left: -70px;
+      background-position: 0 -360px;
+    }
+
+    .banner .area .control.left:hover {
+      background-position: 0 -430px;
+    }
+
+    .banner .area .control.right {
+      right: -70px;
+      background-position: 0 -508px;
+    }
+
+    .banner .area .control.right:hover {
+      background-position: 0 -578px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="banner">
+    <div class="area wrapper_03">
+      <div class="area-left">
+        <ul class="img-list">
+          <li>
+            <a class="item" href="">
+              <img src="./images/banner_02.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="item" href="">
+              <img src="./images/banner_02.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="item" href="">
+              <img src="./images/banner_02.jpeg" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="item" href="">
+              <img src="./images/banner_02.jpeg" alt="">
+            </a>
+          </li>
+        </ul>
+        
+        <ul class="dots-list">
+          <li><a href="#" class="item active"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+          <li><a href="#" class="item"></a></li>
+        </ul>
+      </div>
+      <div class="area-right">
+        <a class="download" href="#">下载客户端</a>
+        <p class="desc">PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+      </div>
+      <a class="control left" href="#"></a>
+      <a class="control right" href="#"></a>
+    </div>
+  </div>
+</body>
+</html>
