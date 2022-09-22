@@ -1,4 +1,4 @@
-body h1, h2, h3, ul, li{
+body h1, h2, h3, ul, li, ol, p ,dl ,dt, dd {
   margin: 0;
   padding: 0;
 }
@@ -15,4 +15,12 @@ ul, li {
 input {
   outline: none;
   border: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+i {
+  font-style: normal;
 }
