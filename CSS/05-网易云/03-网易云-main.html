@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网易云的主要区域</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+
+  <style>
+    .main .area {
+      display: flex;
+      justify-content: space-between;
+      height: 500px;
+      border: 1px solid #d3d3d3;
+      border-width: 0 1px;
+      background-image: url(./images/main_bg.png);
+    }
+
+    .main .area-left {
+      width: 729px;
+    }
+
+    .main .area-right {
+      width: 250px;
+    }
+
+    .main .area-right .user-login {
+      width: 250px;
+      height: 126px;
+      background: url(./images/main_sprite.png) 0 0;
+    }
+
+    .main .area-right .user-login .desc {
+      width: 205px;
+      margin: 0 auto;
+      padding-top: 16px;
+      color: #666;
+      font-size: 12px;
+      line-height: 22px;
+    } 
+
+    .main .area-right .user-login .btn {
+      display: block;
+      width: 100px;
+      height: 31px;
+      line-height: 31px;
+      margin: 15px auto 0;
+      text-align: center;
+      color: #fff;
+      font-size: 12px;
+      background: url(./images/main_sprite.png) 0 -195px;      text-shadow: 0 1px 0 #8a060b;
+    }
+
+  </style>
+
+
+</head>
+<body>
+  
+  <div class="main">
+    <div class="area wrapper_02">
+      <div class="area-left"></div>
+      <div class="area-right">
+        <div class="user-login">
+          <p class="desc">
+            登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机
+          </p>
+          <a class="btn" href="#">用户登录</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
