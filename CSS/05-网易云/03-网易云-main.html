@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
 
-
   <style>
     .main .area {
       display: flex;
@@ -54,6 +53,45 @@
       background: url(./images/main_sprite.png) 0 -195px;      text-shadow: 0 1px 0 #8a060b;
     }
 
+    .main .settle-singer {
+      padding: 20px;
+    }
+
+    .main .settle-singer .list {
+      padding: 5px 0;
+    }
+
+    .main .settle-singer .list .item {
+      display: flex;
+      width: 210px;
+      height: 62px;
+      margin-top: 15px;
+      background-color: #fafafa;
+    }
+
+    .main .settle-singer .list .item .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 3px 12px;
+      border: 1px solid #e9e9e9;
+      border-left: none;
+      overflow: hidden;
+    }
+
+    .main .settle-singer .item .info .desc {
+      font-size: 12px;
+      color: #666;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    
+    .main .hot-anchor {
+      padding: 20px;
+    }
+
   </style>
 
 
@@ -69,6 +107,58 @@
             登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机
           </p>
           <a class="btn" href="#">用户登录</a>
+        </div>
+        <div class="settle-singer">
+          <div class="header_type_01">
+            <h3 class="title">入驻歌手</h3>
+            <a class="more" href="#">查看全部 &gt;</a>
+          </div>
+          <ul class="list">
+            <li>
+              <a href="#" class="item">
+                <div class="ablum">
+                  <img src="./images/singer_01.jpeg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="ablum">
+                  <img src="./images/singer_02.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">吴莫愁Momo</div>
+                  <div class="desc">《中国好声音》选手吴莫愁</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="ablum">
+                  <img src="./images/singer_03.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">孙楠</div>
+                  <div class="desc">歌手孙楠 代表作《你快回来》《燃烧》</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="ablum">
+                  <img src="./images/singer_04.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">陈楚生</div>
+                  <div class="desc">唱作歌手</div>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
