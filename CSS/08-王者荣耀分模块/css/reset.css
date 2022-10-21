@@ -1,0 +1,13 @@
+
+/* reset.css 样式重置文件 */
+/* margin/padding 重置 */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* a元素重置 */
+a {
+  text-decoration: none;
+  color: #333;
+}
