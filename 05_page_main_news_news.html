@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀-main-news</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <style>
+    .main {
+      height: 100px;
+    }
+
+    .news-section {
+      display: flex;
+      height: 342px;
+    }
+
+    .news-section .banner {
+      width: 605px;
+      background-color: #000;
+    }
+
+    .news-section .banner .image-list {
+      display: flex;
+      width: 604px;
+      overflow: hidden;
+    }
+
+    .news-section .banner .image-list .item {
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    .news-section .banner .image-list .item a {
+      display: block;
+    }
+
+    .news-section .banner .image-list .item a img {
+      width: 100%;
+    }
+
+    .news-section .banner .title-list {
+      display: flex;
+      height: 44px;
+      line-height: 44px;
+    }
+
+    .news-section .banner .title-list .item {
+      flex: 1;
+      text-align: center;
+    }
+
+    .news-section .banner .title-list .item a {
+      display: block;
+      font-size: 14px;
+      color: #b1b2be;
+    }
+
+    .news-section .banner .title-list .item.active a,
+    .news-section .banner .title-list .item a:hover {
+      color: #f3c258;
+      background-color: rgba(255,255,255,.15);
+    }
+
+    .news-section .news {
+      flex: 1;
+      background-color: red;
+      overflow: hidden;
+      padding: 0 17px;
+    }
+
+    .news-section .news .title-list {
+      display: flex;
+      height: 48px;
+      border-bottom: 1px solid #000;
+    }
+
+    .news-section .news .title-list .item {
+      width: 52px;
+    }
+
+    .news-section .news .title-list .item a {
+      display: block;
+      height: 48px;
+      box-sizing: border-box;
+      line-height: 48px;
+      color: #b8b9c5;
+      text-align: center;
+      transition: border-bottom 200ms ease-in;
+    }
+
+    .news-section .news .title-list .item.active a, 
+    .news-section .news .title-list .item:not(.more) a:hover {
+      color: #f3c258;
+      border-bottom: 3px solid #f3c258;
+    }
+
+    .news-section .news .notice {
+      height: 36px;
+      line-height: 36px;
+      margin-top: 18px;
+      padding: 0 15px;
+      background: #414046;
+    }
+
+    .news-section .news .notice > a {
+      display: block;
+      font-size: 18px;
+      color: #f3c258;
+    }
+
+    .news-section .news .news-list {
+      margin-top: 12px;
+    }
+
+
+
+
+    .news-section .download {
+      width: 236px;
+      background-color: blue;
+    }
+
+    .news-section .download a {
+      display: flex;
+      background: url(./images/main_sprite.png) no-repeat;
+    }
+
+    .news-section .download a.download-btn {
+      height: 128px;
+      background-position: 0 -219px;
+    }
+
+    .news-section .download a.guard-btn {
+      height: 106px;
+      background-position: 0 -350px;
+    }
+
+
+    .news-section .download a.experience-btn {
+      height: 108px;
+      background-position: 0 -461px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="main main_wrapper">
+    <div class="news-section">
+      <div class="banner">
+        <ul class="image-list">
+          <li class="item">
+            <a href="">
+              <img src="./images/banner_01.jpeg" alt="">
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <img src="./images/banner_02.jpeg" alt="">
+            </a>
+          </li>
+          <li class="item">
+            <a href="">
+              <img src="./images/banner_03.jpeg" alt="">
+            </a>
+          </li>
+        </ul>
+        <ul class="title-list">
+          <li class="item active">
+            <a href="#">桑启的旅途故事</a>
+          </li>
+          <li class="item">
+            <a href="#">启示之音抢先听</a>
+          </li>
+          <li class="item">
+            <a href="#">谁成为版本之子</a>
+          </li>
+          <li>
+            <a href="#">观赛体验升级</a>
+          </li>
+          <li class="item">
+            <a href="#">季后赛开战</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="news">
+        <ul class="title-list">
+          <li class="item active">
+            <a href="">热门</a>
+          </li>
+          <li class="item">
+            <a href="">新闻</a>
+          </li>
+          <li class="item">
+            <a href="">公告</a></a>
+          </li>
+          <li class="item">
+            <a href="">活动</a>
+          </li>
+          <li class="item">
+            <a href="">赛事</a>
+          </li>
+          <li class="item">
+            <a href="">...</a>
+          </li>
+        </ul>
+
+        <p class="notice">
+          <a class="nowrap_ellipsis" href="#">4月21日全服不停机更新公告</a>
+        </p>
+
+        <ul class="news-list">
+          <li class="item">
+            <a class="desc nowrap_ellipsis" href="">
+              <i class="news_type news_type_hot">热门</i>
+              最新BUG修复进展【老亚瑟的答疑时间】
+            </a>
+            <span class="date">04/19</span>
+          </li>
+
+          <li class="item">
+            
+          </li>
+        </ul>
+      </div>
+
+      <div class="download">
+        <a class="download-btn" href="#"></a>
+        <a class="guard-btn" href="#"></a>
+        <a class="experience-btn" href="#"></a>
+      </div>
+    </div>
+  </div>
+  <div class="content-section"></div>
+  <div class="match-section"></div>
+
+</body>
+</html>
