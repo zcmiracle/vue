@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀-main-news</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <style>
+    .main {
+      height: 100px;
+    }
+
+    .news-section {
+      display: flex;
+      height: 342px;
+    }
+
+    .news-section .banner {
+      width: 605px;
+      background-color: orange;
+    }    
+
+    .news-section .news {
+      flex: 1;
+      background-color: red;
+    }
+
+    .news-section .download {
+      width: 236px;
+      background-color: blue;
+    }
+
+    .news-section .download a {
+      display: flex;
+      background: url(./images/main_sprite.png) no-repeat;
+    }
+
+    .news-section .download a.download-btn {
+      height: 128px;
+      background-position: 0 -219px;
+    }
+
+    .news-section .download a.guard-btn {
+      height: 106px;
+      background-position: 0 -350px;
+    }
+
+
+    .news-section .download a.experience-btn {
+      height: 108px;
+      background-position: 0 -461px;
+    }
+
+
+
+  </style>
+
+</head>
+<body>
+
+  <div class="main main_wrapper">
+    <div class="news-section">
+      <div class="banner"></div>
+      <div class="news"></div>
+      <div class="download">
+        <a class="download-btn" href="#"></a>
+        <a class="guard-btn" href="#"></a>
+        <a class="experience-btn" href="#"></a>
+      </div>
+    </div>
+  </div>
+  <div class="content-section"></div>
+  <div class="match-section"></div>
+</body>
+</html>
