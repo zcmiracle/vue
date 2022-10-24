@@ -1,3 +1,7 @@
+.body {
+  font: 14px/1.5 "Microsoft YaHei",Tahoma,"simsun",sans-serif;
+  color: #333;
+}
 
 .top_wrapper {
   width: 980px;
@@ -12,4 +16,11 @@
 .main_wrapper {
   width: 1200px;
   margin: 0 auto;
+}
+
+/* 文字不换行显示 3行代码 */
+.nowrap_ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

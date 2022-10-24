@@ -5,7 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>王者荣耀-main-news</title>
-
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/common.css">
 
@@ -17,6 +16,7 @@
     .news-section {
       display: flex;
       height: 342px;
+      background: url(./images/news_bg.png) no-repeat;
     }
 
     .news-section .banner {
@@ -56,7 +56,7 @@
 
     .news-section .banner .title-list .item a {
       display: block;
-      font-size: 14px;
+      /* font-size: 14px; */
       color: #b1b2be;
     }
 
@@ -68,11 +68,11 @@
 
     .news-section .news {
       flex: 1;
-      background-color: red;
-      overflow: hidden;
+      /* background-color: red; */
       padding: 0 17px;
+      overflow: hidden;
     }
-
+    
     .news-section .news .title-list {
       display: flex;
       height: 48px;
@@ -90,15 +90,17 @@
       line-height: 48px;
       color: #b8b9c5;
       text-align: center;
+
       transition: border-bottom 200ms ease-in;
     }
 
-    .news-section .news .title-list .item.active a, 
-    .news-section .news .title-list .item:not(.more) a:hover {
+    .news-section .news .title-list .item.item.active a,
+    .news-section .news .title-list .item.item:not(.more) a:hover {
       color: #f3c258;
       border-bottom: 3px solid #f3c258;
     }
 
+    
     .news-section .news .notice {
       height: 36px;
       line-height: 36px;
@@ -113,11 +115,29 @@
       color: #f3c258;
     }
 
-    .news-section .news .news-list {
+    .news-section .news .news-list {    
       margin-top: 12px;
     }
 
+    .news-section .news .news-list .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 11px;
+    }
 
+    .news-section .news .news-list .item .desc {
+      flex: 1;
+      color: #b8b9c5;
+      /* ??? */
+      white-space: nowrap; 
+    }
+
+
+    .news-section .news .news-list .item .date {
+      padding: 0 8px;
+      color: #999;
+      font-size: 12px;
+    }
 
 
     .news-section .download {
@@ -199,7 +219,7 @@
             <a href="">新闻</a>
           </li>
           <li class="item">
-            <a href="">公告</a></a>
+            <a href="">公告</a>
           </li>
           <li class="item">
             <a href="">活动</a>
@@ -207,28 +227,67 @@
           <li class="item">
             <a href="">赛事</a>
           </li>
-          <li class="item">
+          <li class="item more">
             <a href="">...</a>
           </li>
         </ul>
 
         <p class="notice">
-          <a class="nowrap_ellipsis" href="#">4月21日全服不停机更新公告</a>
+          <a class="nowwrap_ellipsis" href="#">10月20日全服不停机更新公告</a>
         </p>
 
         <ul class="news-list">
           <li class="item">
-            <a class="desc nowrap_ellipsis" href="">
+            <a class="desc nowrap_ellipsis" href="#">
               <i class="news_type news_type_hot">热门</i>
-              最新BUG修复进展【老亚瑟的答疑时间】
+              周年庆头像框新鲜出炉！
             </a>
-            <span class="date">04/19</span>
+            <span class="date">10/13</span>
           </li>
-
           <li class="item">
-            
+            <a class="desc nowrap_ellipsis" href="#">
+              <i class="news_type news_type_hot">热门</i>
+              周年庆头像框票选活动开启！—互动小任务第19期
+            </a>
+            <span class="date">10/09</span>
+          </li>
+          <li class="item">
+            <a class="desc nowrap_ellipsis" href="#">
+              <i class="news_type news_type_hot">热门</i>
+              互动小任务第18期-金秋主题头像框方案票选结果公布
+            </a>
+            <span class="date">09/29</span>
+          </li>
+          <li class="item">
+            <a class="desc nowrap_ellipsis" href="#">
+              <i class="news_type news_type_hot">公告</i>
+              9月29日全服不停机更新公告
+            </a>
+            <span class="date">09/28</span>
+          </li>
+          <li class="item">
+            <a class="desc nowrap_ellipsis" href="#">
+              <i class="news_type news_type_hot">热门</i>
+              背《滕王阁序》免费得弈星新皮肤火热进行中
+            </a>
+            <span class="date">09/27</span>
+          </li>
+          <li class="item">
+            <a class="desc nowrap_ellipsis" href="#">
+              <i class="news_type news_type_hot">热门</i>
+              互动小任务第18期-金秋主题头像框票选活动开启！
+            </a>
+            <span class="date">09/26</span>
+          </li>
+          <li class="item">
+            <a class="desc nowrap_ellipsis" href="#">
+              <i class="news_type news_type_hot">热门</i>
+              姜子牙英雄品质升级共创-技能特效研讨活动开启
+            </a>
+            <span class="date">09/23</span>
           </li>
         </ul>
+
       </div>
 
       <div class="download">
