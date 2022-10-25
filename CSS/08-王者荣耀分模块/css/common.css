@@ -24,3 +24,37 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+
+
+.news_type::before {
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+  margin-right: 2px;
+
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+
+  border: 1px solid #f00;
+  border-radius: 2px;
+}
+
+.news_type_hot:before {
+  content: "热门";
+  color: #ff3636;
+  border-color: #ff3636;
+}
+
+.news_type_notice::before {
+  content: "公告";
+  color: #f4be19;
+  border-color: #f4be19;
+}
+
+.news_type_news::before {
+  content: "新闻";
+  color: #1e96ab;
+  border-color: #1e96ab;
+}
