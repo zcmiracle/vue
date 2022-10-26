@@ -20,11 +20,42 @@
       height: 1000px;
     }
 
-
     .main .match-center .match-news {
       display: flex;
+      height: 260px;
+      margin: 20px 0 15px;
     }
 
+    .main .match-center .match-news .news-left {
+      width: 221px;
+      background-color: orange;
+    }
+
+    .main .match-center .match-news .news-right {
+      flex: 1;
+      overflow: hidden;
+      padding: 0 15px;
+    }
+
+    .main .match-center .news-right .title {
+      font-size: 24px;
+      color: #333;
+     padding-right: 80px;
+    }
+
+    .main .match-center .news-right .subtitle {
+      padding-right: 160px;
+      color: #666;
+
+      /* display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical; */
+    }
+
+    .main .section-content .right-content {
+      width: 295px;
+      height: 500px;
+    }
 
     .main .section-content .right-content {
       width: 295px;
@@ -41,6 +72,7 @@
   <div class="main main_wrapper">
     <div class="section-content">
       <div class="left-content">
+
         <div class="content-center">
           <div class="section_header">
             <!-- 内容中心 头部 -->
@@ -73,8 +105,9 @@
         
           <!-- 视频 -->
           <div class="video_list">
+
             <a class="video_item" href="#">
-              <div class="ablum">
+              <div class="album">
                 <img src="./images/video_album_01.png" alt="">
                 <div class="info">
                   <span class="count">1.2万</span>
@@ -90,8 +123,8 @@
             </a>
             
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">2.7万</span>
                   <span class="date">2020-08-29</span>
@@ -106,8 +139,8 @@
             </a>
 
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">121.4万</span>
                   <span class="date">2022-08-29</span>
@@ -122,8 +155,8 @@
             </a>
             
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">121.4万</span>
                   <span class="date">2022-08-29</span>
@@ -138,8 +171,8 @@
             </a>
 
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">121.4万</span>
                   <span class="date">2022-08-29</span>
@@ -154,8 +187,8 @@
             </a>
 
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">121.4万</span>
                   <span class="date">2022-08-29</span>
@@ -170,8 +203,8 @@
             </a>
 
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">121.4万</span>
                   <span class="date">2022-08-29</span>
@@ -186,8 +219,8 @@
             </a>
 
             <a class="video_item" href="#">
-              <div class="ablum">
-                <img src="./images/video_album_02.png" alt="">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
                 <div class="info">
                   <span class="count">121.4万</span>
                   <span class="date">2022-08-29</span>
@@ -205,11 +238,187 @@
 
         </div>
 
-
-
-
         <!-- 赛事中心 -->
         <div class="match-center">
+         
+          <div class="section_header">
+            <div class="header_left">
+              <h3 class="title title-icon-match">赛事中心</h3>
+            </div>
+            <div class="header_right">
+              <a class="more" href="#">更多</a>
+            </div>
+          </div>
+
+          <div class="tab_control">
+            <div class="item item_wrap active">挑战者杯</div>
+            <div class="line"></div>
+            <div class="item item_wrap">KPL</div>
+            <div class="line"></div>
+            <div class="item item_wrap">K甲联赛</div>
+            <div class="line"></div>
+            <div class="item item_wrap">全国大赛</div>
+            <div class="line"></div>
+            <div class="item item_wrap">高校联赛</div>
+            <div class="line"></div>
+            <div class="item item_wrap">tag=""</div>
+            <div class="line"></div>
+            <div class="item item_wrap">微信游戏邀请赛</div>
+            <div class="line"></div>
+          </div>
+
+          <div class="match-news">
+            <a class="news-left" href="#">
+              <img src="./images/match_01.jpg" alt="">
+            </a>
+            <div class="news-right">
+              <div class="title nowrap_ellipsis">
+                武汉eStarPro勇夺2022年王者荣耀挑战者杯
+              </div>
+              <div class="subtitle notice">
+                10月6日，2022年王者荣耀挑战者杯总决赛顺利落幕，武汉eStarPro和北京WB历经7局鏖战，最终武汉eStarPro以4:3的比分击败对手成功卫冕挑战者杯
+              </div>
+              <ul>
+                <li>三大赛道群雄并起，2022挑战者杯淘汰赛八进四成王败寇</li>
+                <li>厉兵秣马严阵以待，2022挑战者杯小组赛即将打响</li>
+                <li>王者荣耀挑战者杯2022赛事规则</li>
+                <li>王者荣耀赛事竞猜系统公告</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="video_list">
+            
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+            <a class="video_item" href="#">
+              <div class="album">
+                <img src="./images/video_album_02.jpg" alt="">
+                <div class="info">
+                  <span class="count">5730</span>
+                  <span class="date">2022-01-28</span>
+                </div>
+                <div class="cover">
+                  <i class="icon_pay"></i>
+                </div>
+              </div>
+              <div class="desc">
+                【荣耀大话王】九尾现场在线导戏 花海清融易峥上演默契大挑战
+              </div>
+            </a>
+
+          </div>
+
         </div>
 
       </div>
