@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀-top</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/animation.css">
+
+  <style>
+    .top {
+      border: 1px solid #f5f5f5;
+    }
+
+    .top .area {
+      display: flex;
+      justify-content: space-between;
+      height: 41px;
+      line-height: 41px;
+    }
+
+    .top .left-area {
+      display: flex;
+    }
+
+    .top .left-area .logo a {
+      position: relative;
+      /*  */
+      z-index: 11;
+      display: block;
+      width: 150px;
+      text-indent: -9999px;
+      background: url(./images/top_logo.png) no-repeat center center;
+    }
+
+    .top .left-area .recommand {
+      position: relative;
+    }
+
+    .top .left-area .recommand-ad {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: -150px;
+      display: none;
+    }
+
+    .top .left-area .recommand:hover .recommand-ad {
+      display: block;
+    }
+
+  
+    .top .right-area {
+      display: flex;
+    }
+
+    .top .right-area .item a {
+      position: relative;
+      display: block;
+      font-size: 14px;
+      color: #464646;
+    }
+
+    .top .right-area .item a.ranking {
+      margin-left: 20px;
+      padding-right: 30px;
+    }
+
+    .top .right-area .item a.ranking::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background: url(./images/top_sprite.png) no-repeat 0 0;
+
+      opacity: 0.2;
+      transform: rotate(90deg);
+    }
+
+    .top .right-area .item a.ranking .dropdown {
+      position: absolute;
+      right: 0;
+      top: 41px;
+      display: none;
+    }
+    
+    .top .right-area .item a.ranking:hover .dropdown {
+      display: block;
+      animation: opacityAnim 400ms ease forwards;
+    }
+
+    .top .right-area .item a.ranking .dropdown iframe {
+      width: 708px;
+      height: 582px;
+    }
+
+    .top .right-area .item a.growth {
+      padding-left: 30px;
+    }
+
+
+    .top .right-area .item a .icon-grow {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background: url(./images/top_sprite.png) no-repeat -30px; 
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="top">
+    <div class="top_wrapper area">
+
+      <!--  -->
+      <div class="left-area">
+        <h2 class="logo">
+          <a href="#">腾讯游戏</a>
+        </h2>
+        <div class="recommend">
+          <img src="./images/recommend_game.jpg" alt="">
+          <a class="recommend-ad" href="https://lpl.qq.com/es/toc3/">
+            <img src="./images/recommend_ad.jpg" alt="">
+          </a>
+        </div>
+      </div>
+
+      <ul class="right-area">
+        <li class="item"> 
+          <a class="growth" href="#">
+            <i class="icon-grow"></i>
+            成长守护平台
+          </a>
+        </li>
+        <li class="item"> 
+          <a class="ranking" href="#">
+            腾讯游戏排行榜
+            <div class="dropdown">
+              <iframe src="https://game.gtimg.cn/images/js/title/title_game_rank.html" frameborder="0"></iframe>
+            </div>
+          </a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+</body>
+</html>

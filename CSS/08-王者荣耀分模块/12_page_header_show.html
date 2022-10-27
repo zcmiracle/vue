@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀-header</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <style>
+    .header {
+      position: relative;
+      background-color: rgba(0,0,0,.8);
+    }
+
+    .header .area {
+      display: flex;
+      justify-content: space-between;
+      height: 84px;
+    }
+
+    .header .left-area {
+      display: flex;
+    }
+
+    .header .left-area .logo a {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: block;
+      width: 200px;
+      height: 54px;
+      text-indent: -9999px;
+      background: url(./images/logo.png) no-repeat center;
+    }
+
+    .header .left-area .nav-list {
+      display: flex;
+      margin-left: 30px;
+    }
+
+    .header .left-area .nav-list .item {
+      width: 110px;
+      padding-right: 5px;
+    }
+
+    .header .left-area .nav-list .item:hover,
+    .header .left-area .nav-list .item.active {
+      background: url(./images/main_sprite.png) no-repeat 0 0;
+    }
+
+    .header .left-area .nav-list .item a {
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+      padding-top: 20px;
+      font-size: 18px;
+      color: #c9c9dd;
+      text-align: center;
+    }
+
+
+    .header .left-area .nav-list .item.hover a,
+    .header .left-area .nav-list .item.active a {
+      color: #e4b653;
+    }
+
+    .header .left-area .nav-list .item a .desc {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #858792;
+    }
+
+    .header .left-area .nav-list .item:hover .desc,
+    .header .left-area .nav-list .item.active .desc {
+      color: #91763f;
+    }
+
+    .header .left-area .search {
+      margin-left: 10px;
+    }
+
+    .header .left-area .search a {
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      display: block;
+      width: 27px;
+      height: 26px;
+      background: url(./images/nav_search.png);
+    }
+
+    .header .right-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .header .right-area .image img {
+      border: 1px solid #d9ad50;
+      border-radius: 50%;
+    }
+
+    .header .right-area .info {
+      margin-left: 12px;
+    }
+
+    .header .right-area .info a {
+      color: #fff;
+    }
+
+    .header .right-area .info p {
+      font-size: 14px;
+      color: #858792;
+      margin-top: 5px;
+    }
+
+    .header .dropmenu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 84px;
+      height: 0;
+      background-color: rgba(0, 0, 0, .7);
+      transition: height 300ms ease-in;
+      overflow: hidden;
+    }
+
+    .header:hover .dropmenu {
+      height: 330px;
+    }
+
+    .header .dropmenu .inner {
+      display: flex;
+      margin: 0 auto;
+      width: 940px;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 15px 0 30px 50px;
+    }
+
+    .header .dropmenu .list {
+      width: 1215px;
+      padding-top: 5px;
+      text-align: center;
+    }
+
+    .header .dropmenu .list .item {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .header .dropmenu .list .item a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #c9c9dd;
+    }
+
+    .header .dropmenu .list .item a:hover {
+      color: #f3c258;
+      text-decoration: underline;
+    }
+
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="header">
+
+    <div class="area header_wrapper">
+      <div class="left-area">
+        <h1 class="logo">
+          <a href="#">王者荣耀</a>
+        </h1>
+        <ul class="nav-list">
+          <li class="item active">
+            <a href="#">
+              游戏资料
+              <span class="desc">DATA</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              内容中心
+              <span class="desc">CONTENTS</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              赛事中心
+              <span class="desc">MATCH</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              百态王者
+              <span class="desc">CULTURE</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              社区互动
+              <span class="desc">COMMUNITY</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              玩家支持
+              <span class="desc">PLAYER</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#">
+              IP新游
+              <span class="desc">NEW GAMES</span>
+            </a>
+          </li>
+        </ul>
+        <div class="search">
+          <a href="#"></a>
+        </div>
+      </div>
+
+      <div class="right-area">
+        <a class="image" href="#">
+          <img src="./images/header_login.png" alt="">
+        </a>
+        <div class="info">
+          <a href="#">欢迎登录</a>
+          <p>登录后查看游戏战绩</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropmenu">
+      <div class="inner">
+        <dl class="list">
+          <dd class="item">
+            <a href="#">版本介绍</a>
+          </dd>
+          <dd class="item">
+            <a href="#">游戏介绍</a>
+          </dd>
+          <dd class="item">
+            <a href="#">英雄资料</a>
+          </dd>
+          <dd class="item">
+            <a href="#">爆料站</a>
+          </dd>
+          <dd class="item">
+            <a href="#">世界观体验站</a>
+          </dd>
+          <dd class="item">
+            <a href="#">游戏壁纸</a>
+          </dd>
+        </dl>
+        <dl class="list">
+          <dd class="item">
+            <a href="#">攻略中心</a>
+          </dd>
+          <dd class="item">
+            <a href="#">开放素材库</a>
+          </dd>
+          <dd class="item">
+            <a href="#">内容共创平台</a>
+          </dd>
+          <dd class="item">
+            <a href="#">手语大发参考</a>
+          </dd>
+        </dl>
+        <dl class="list">
+          <dd class="item">
+            <a href="#">世界冠军杯</a>
+          </dd>
+          <dd class="item">
+            <a href="#">挑战者杯</a>
+          </dd>
+          <dd class="item">
+            <a href="#">KPL</a>
+          </dd>
+          <dd class="item">
+            <a href="#">全国大赛</a>
+          </dd>
+          <dd class="item">
+            <a href="#">女子公开赛</a>
+          </dd>
+          <dd class="item">
+            <a href="#">K甲联赛</a>
+          </dd>
+          <dd class="item">
+            <a href="#">高校联赛</a>
+          </dd>
+          <dd class="item">
+            <a href="#">王者赛宝</a>
+          </dd>
+          <dd class="item">
+            <a href="#">赛事数据</a>
+          </dd>
+        </dl>
+        <dl class="list">
+          <dd class="item">
+            <a href="#">荣耀.传承</a>
+          </dd>
+          <dd class="item">
+            <a href="#">王者文化站</a>
+          </dd>
+          <dd class="item">
+            <a href="#">万千世界</a>
+          </dd>
+          <dd class="item">
+            <a href="#">星光殿堂</a>
+          </dd>
+          <dd class="item">
+            <a href="#">IP共创计划</a>
+          </dd>
+          <dd class="item">
+            <a href="#">商户特权</a>
+          </dd>
+          <dd class="item">
+            <a href="#">龙翼王者卡</a>
+          </dd>
+        </dl>
+        <dl class="list">
+          <dd class="item">
+            <a href="#">创意互动营</a>
+          </dd>
+          <dd class="item">
+            <a href="#">王者营地</a>
+          </dd>
+          <dd class="item">
+            <a href="#">微信圈子</a>
+          </dd>
+          <dd class="item">
+            <a href="#">官方微博</a>
+          </dd>
+          <dd class="item">
+            <a href="#">微信公众号</a>
+          </dd>
+          <dd class="item">
+            <a href="#">手Q订阅号</a>
+          </dd>
+        </dl>
+        <dl class="list">
+          <dd class="item">
+            <a href="#">腾讯游戏防沉迷</a>
+          </dd>
+          <dd class="item">
+            <a href="#">成长守护平台</a>
+          </dd>
+          <dd class="item">
+            <a href="#">对局环境情报站</a>
+          </dd>
+          <dd class="item">
+            <a href="#">客服专区</a>
+          </dd>
+          <dd class="item">
+            <a href="#">礼包兑换</a>
+          </dd>
+          <dd class="item">
+            <a href="#">自助服务</a>
+          </dd>
+        </dl>
+        <dl class="list">
+          <dd class="item">
+            <a href="#">王者荣耀.世界</a>
+          </dd>
+          <dd class="item">
+            <a href="#">代号:破晓</a>
+          </dd>
+          <dd class="item">
+            <a href="#">代号:启程</a>
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
