@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王者荣耀-右侧导航</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+
+  <style>
+    .right-nav {
+      position: fixed;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 0px;
+      width: 254px;
+      height: 494px;
+      background: url(./css/right_nav_bg.png) no-repeat;
+    }
+
+    .right-nav .right-list {
+      position: relative;
+      left: 60px;
+    }
+
+    .right-nav .right-list .item {
+      width: 117px;
+      height: 38px;
+      background-position: 0 -3px;
+    }
+
+    .right-nav .right-list .item.code img {
+      width: 111px;
+      height: 110px;
+      margin-top: 3px;
+    }
+
+    .right-nav .right-list .item.weibo {
+      background-position: -122px -120px;
+    }
+
+    .right-nav .right-list .item.weibo:hover {
+      background-position: -122px -240px;
+    }
+
+    .right-nav .right-list .item.gzh {
+      background-position: -122px -160px;
+    }
+
+    .right-nav .right-list .item.gzh:hover {
+      background-position: -122px -200px;
+    }
+
+    .right-nav .right-list .item.sph {
+      background-position: -122px 0;
+    }
+
+    .right-nav .right-list .item.sph:hover {
+      background-position: -122px -42px;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <div class="right-nav">
+    <div class="right-dj">
+      <img src="./images/right_dj.png" alt="">
+    </div>
+
+    <ul class="right-list">
+      <li class="item code">
+        <img src="./images/right_code.webp" alt="">
+      </li>
+      <li class="item weibo">
+        <a href="#">官方微博</a>
+      </li>
+      <li class="item gzh">
+        <a href="#">微信公众号</a>
+      </li>
+      <li class="item sph">
+        <a href="#">官方视频号</a>
+      </li>
+    </ul>
+
+  </div>
+
+</body>
+</html>
