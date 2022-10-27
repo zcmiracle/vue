@@ -47,18 +47,18 @@
       font-weight: 700;
     }
 
-    .main .hero-skin .hero-list {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-    
     .main .hero-skin .new-hero .intro .date {
       margin-top: 5px;
       color: #999;
       font-size: 12px;
     }
 
+    .main .hero-skin .hero-list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    
     .main .hero-skin .hero-list .item a {
       position: relative;
       display: block;
@@ -121,6 +121,39 @@
       border-bottom: 1px solid #e5e5e5;
     }
 
+    .main .kpl-schedule .schedule-time tbody td {
+      padding: 10px 0;
+    }
+
+    .main .kpl-schedule .schedule-time tbody .team {
+      margin-bottom: 5px;
+    }
+
+    .main .kpl-schedule .schedule-time tbody img {
+      width: 25px;
+      height: 25px;
+    }
+
+    .main .kpl-schedule .schedule-time td:nth-child(2),
+    .main .kpl-schedule .schedule-time td:nth-child(4) {
+      width: 83px;
+    }
+
+    .main .kpl-schedule .schedule-time td:nth-child(3) {
+      font-size: 14px;
+      color: #f3c258;
+    }
+
+    .main .kpl-schedule .match-schedule {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .main .kpl-schedule .match-schedule img {
+      display: block;
+      width: 293px;
+      height: 159px;
+    }
 
   </style>
 
@@ -303,12 +336,10 @@
             </tbody>
           </table>
 
-          <a class="match_schedule" href="#">
+          <a class="match-schedule" href="#">
             <img src="./images/match_schedule.webp" alt="">
           </a>
         </div>
-
-
       </div>
     </div>
   </div>
