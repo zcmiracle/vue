@@ -1,0 +1,143 @@
+.main .section-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .section-content .left-content {
+  width: 872px;
+  height: 1000px;
+}
+
+.main .section-content .right-content {
+  width: 295px;
+  height: 500px;
+}
+
+.main .hero-skin .new-hero {
+  margin-top: 20px;
+}
+
+.main .hero-skin .new-hero .album {
+  display: block;
+}
+
+.main .hero-skin .new-hero .intro {
+  height: 47px;
+  padding: 10px 15px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+
+.main .hero-skin .new-hero .intro .name {
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main .hero-skin .new-hero .intro .date {
+  margin-top: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+.main .hero-skin .hero-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.main .hero-skin .hero-list .item a {
+  position: relative;
+  display: block;
+}
+
+.main .hero-skin .hero-list .item a .cover {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  writing-mode: vertical-lr;
+  color: #f3c258;
+  background-color: rgba(0, 0, 0, .85);
+  transform: opacity 300ms ease;
+}
+
+.main .hero-skin .hero-list .item a:hover .cover {
+  opacity: 1;
+}
+
+.main .kpl-schedule {
+  margin-top: 20px;
+}
+
+.main .kpl-schedule .section_header .buy {
+  width: 70px;
+  height: 22px;
+  margin-right: 8px;
+  line-height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #f3c258;
+  border-radius: 3px;
+  text-align: center;
+  text-indent: 20px;
+  background: url(../images/main_sprite.png) no-repeat -243px -85px;
+}
+
+.main .kpl-schedule .schedule-time {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.main .kpl-schedule .schedule-time thead tr {
+  background-color: #f5f5f5;
+  height: 29px;
+  line-height: 29px;
+  font-size: 14px;
+  color: #999;
+}
+
+.main .kpl-schedule .schedule-time tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.main .kpl-schedule .schedule-time tbody td {
+  padding: 10px 0;
+}
+
+.main .kpl-schedule .schedule-time tbody .team {
+  margin-bottom: 5px;
+}
+
+.main .kpl-schedule .schedule-time tbody img {
+  width: 25px;
+  height: 25px;
+}
+
+.main .kpl-schedule .schedule-time td:nth-child(2),
+.main .kpl-schedule .schedule-time td:nth-child(4) {
+  width: 83px;
+}
+
+.main .kpl-schedule .schedule-time td:nth-child(3) {
+  font-size: 14px;
+  color: #f3c258;
+}
+
+.main .kpl-schedule .match-schedule {
+  display: block;
+  margin-top: 10px;
+}
+
+.main .kpl-schedule .match-schedule img {
+  display: block;
+  width: 293px;
+  height: 159px;
+}

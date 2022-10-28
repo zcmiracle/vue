@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.main .entrance-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.main .entrance-section .item {
+  width: 291px;
+  height: 134px;
+}
+
+.main .entrance-section a {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main .entrance-section a img {
+  width: 100%;
+  height: 100%;
+  transition: transform 400ms ease;
+}
+
+.main .entrance-section a:hover img {
+  transform: scale(1.1);
+}

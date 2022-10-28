@@ -1,0 +1,50 @@
+.right-nav {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0px;
+  width: 254px;
+  height: 494px;
+  background: url(../css/right_nav_bg.png) no-repeat;
+}
+
+.right-nav .right-list {
+  position: relative;
+  left: 60px;
+}
+
+.right-nav .right-list .item {
+  width: 117px;
+  height: 38px;
+  background-position: 0 -3px;
+}
+
+.right-nav .right-list .item.code img {
+  width: 111px;
+  height: 110px;
+  margin-top: 3px;
+}
+
+.right-nav .right-list .item.weibo {
+  background-position: -122px -120px;
+}
+
+.right-nav .right-list .item.weibo:hover {
+  background-position: -122px -240px;
+}
+
+.right-nav .right-list .item.gzh {
+  background-position: -122px -160px;
+}
+
+.right-nav .right-list .item.gzh:hover {
+  background-position: -122px -200px;
+}
+
+.right-nav .right-list .item.sph {
+  background-position: -122px 0;
+}
+
+.right-nav .right-list .item.sph:hover {
+  background-position: -122px -42px;
+}

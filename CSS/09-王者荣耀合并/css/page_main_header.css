@@ -1,0 +1,153 @@
+.header {
+  position: relative;
+  background-color: rgba(0,0,0,.8);
+}
+
+.header .area {
+  display: flex;
+  justify-content: space-between;
+  height: 84px;
+}
+
+.header .left-area {
+  display: flex;
+}
+
+.header .left-area .logo a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 200px;
+  height: 54px;
+  text-indent: -9999px;
+  background: url(../images/logo.png) no-repeat center;
+}
+
+.header .left-area .nav-list {
+  display: flex;
+  margin-left: 30px;
+}
+
+.header .left-area .nav-list .item {
+  width: 110px;
+  padding-right: 5px;
+}
+
+.header .left-area .nav-list .item:hover,
+.header .left-area .nav-list .item.active {
+  background: url(../images/main_sprite.png) no-repeat 0 0;
+}
+
+.header .left-area .nav-list .item a {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 20px;
+  font-size: 18px;
+  color: #c9c9dd;
+  text-align: center;
+}
+
+
+.header .left-area .nav-list .item.hover a,
+.header .left-area .nav-list .item.active a {
+  color: #e4b653;
+}
+
+.header .left-area .nav-list .item a .desc {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #858792;
+}
+
+.header .left-area .nav-list .item:hover .desc,
+.header .left-area .nav-list .item.active .desc {
+  color: #91763f;
+}
+
+.header .left-area .search {
+  margin-left: 10px;
+}
+
+.header .left-area .search a {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: 27px;
+  height: 26px;
+  background: url(../images/nav_search.png);
+}
+
+.header .right-area {
+  display: flex;
+  align-items: center;
+}
+
+.header .right-area .image img {
+  border: 1px solid #b5ab95;
+  border-radius: 50%;
+}
+
+.header .right-area .info {
+  margin-left: 12px;
+}
+
+.header .right-area .info a {
+  color: #fff;
+}
+
+.header .right-area .info p {
+  font-size: 14px;
+  color: #858792;
+  margin-top: 5px;
+}
+
+.header .dropmenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 84px;
+  height: 0;
+  background-color: rgba(0, 0, 0, .7);
+  transition: height 300ms ease-in;
+  overflow: hidden;
+}
+
+.header:hover .dropmenu {
+  height: 330px;
+}
+
+.header .dropmenu .inner {
+  display: flex;
+  margin: 0 auto;
+  width: 940px;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 15px 0 30px 50px;
+}
+
+.header .dropmenu .list {
+  width: 1215px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.header .dropmenu .list .item {
+  height: 30px;
+  line-height: 30px;
+}
+
+.header .dropmenu .list .item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c9c9dd;
+}
+
+.header .dropmenu .list .item a:hover {
+  color: #f3c258;
+  text-decoration: underline;
+}

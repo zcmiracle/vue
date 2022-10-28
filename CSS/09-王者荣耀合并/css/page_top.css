@@ -1,0 +1,91 @@
+.top {
+  border: 1px solid #f5f5f5;
+}
+
+.top .area {
+  display: flex;
+  justify-content: space-between;
+  height: 41px;
+  line-height: 41px;
+}
+
+.top .left-area {
+  display: flex;
+}
+
+.top .left-area .logo a {
+  display: block;
+  width: 150px;
+  text-indent: -9999px;
+  background: url(../images/top_logo.png) no-repeat center center;
+}
+
+.top .right-area {
+  display: flex;
+}
+
+.top .right-area .item a {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: #464646;
+}
+
+.top .right-area .item a.ranking {
+  margin-left: 20px;
+  padding-right: 30px;
+}
+
+.top .right-area .item a.ranking::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: url(../images/top_sprite.png) no-repeat 0 0;
+
+  opacity: 0.2;
+  transform: rotate(90deg);
+}
+
+
+.top .right-area .item a.ranking .dropdown {
+  position: absolute;
+  z-index: 9;
+  right: 0;
+  top: 41px;
+  display: none;
+}
+
+.top .right-area .item a.ranking:hover .dropdown {
+  display: block;
+  animation: opacityAnim 400ms ease forwards;
+}
+
+.top .right-area .item a.ranking .dropdown iframe {
+  width: 708px;
+  height: 582px;
+}
+
+.top .right-area .item a.growth {
+  padding-left: 30px;
+}
+
+
+.top .right-area .item a.growth {
+  padding-left: 30px;
+}
+
+.top .right-area .item a .icon-grow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  background: url(../images/top_sprite.png) no-repeat -30px; 
+}
