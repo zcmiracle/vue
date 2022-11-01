@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    table {
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 8px 16px;
+      border: 1px solid orange;
+      color: red;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <script>
+        
+    document.write("<table>")
+
+    for (var i = 0; i < 9; i++) {
+      document.write("<tr>")
+
+        for (var m = 0; m <i + 1; m ++) {
+          var a = m + 1;
+          var b = i + 1;
+          var result = (m + 1) * (i + 1)
+          document.write(`<td>${a}*${b}=${result}</td>`)
+        }
+
+        document.write("</tr>")
+    }
+
+    document.write("</table>")
+
+  </script>
+
+</body>
+</html>
