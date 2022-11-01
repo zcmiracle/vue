@@ -14,7 +14,22 @@
     var count2 = 53232323
     var count3 = 897867576532
 
+    function formatCount(count) {
+      var res = 0
+      if (count >= 10_0000_0000) { // 超过10_0000_0000值进行转换
+         res = Math.floor(count / 1_0000_0000) + "亿"
+      } else if (count >= 10_000) {
+        res = Math.floor(count / 1_000) + "万"
+      } else {
+        res = count
+      }
 
+      return res
+    }
+
+    console.log(formatCount(count1))
+    console.log(formatCount(count2))
+    console.log(formatCount(count3))
 
   </script>
   
