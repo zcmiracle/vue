@@ -5,9 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+
+  </style>
+
 </head>
 <body>
   
+
+  <!-- 1、编写位置：编写在html内部 -->
+  <a href="#" onclick="alert('百度一下')">百度一下</a>
+  <a href="javascript: alert('百度一下')">百度一下</a>
+
+  <!-- 2、编写位置二：编写在script元素之内 -->
   <a class="google" href="#">Google一下</a>
 
   <script>
@@ -18,7 +29,7 @@
   </script>
 
 
-  <!-- 编写位置 独立的js文件 -->
+  <!-- 3、编写位置 独立的js文件 -->
   <a class="baidu" href="#">百度一下</a>
   <script src="./js/baidu.js"> 
 

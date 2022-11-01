@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var foo1 = 0
+    var foo2 = ""
+
+    // == 运算符，在类型不相同的情况下，会将运算元先转成Number的值，在进行比较(隐式转换)
+    // null 比较特殊：null在进行比较的时候，应该是会被当成一个对象和原生类型进行比较的
+    console.log(Number(foo1));
+    console.log(Number(foo2));
+    console.log(foo1 == foo2);
+
+    // === 运算符，在类型不相同的情况，直接返回false
+    console.log(foo1 === foo2);
+
+  </script>
+
+</body>
+</html>
