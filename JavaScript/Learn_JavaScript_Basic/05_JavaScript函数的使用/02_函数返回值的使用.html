@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  
+  <script>
+    
+    // var result = prompt("请输入一个数字")
+
+    // 理解函数的返回值
+    function sayHello(name) {
+      console.log(`Hi ${name}`);
+    }
+
+    // 2.返回值的注意事项
+    // 注意事项1：所有的函数，如果没有写返回值，那么默认返回undefined
+    function foo() {
+      console.log("foo函数被执行");
+    }
+
+    var result = foo()
+    console.log("foo的返回值：", result);
+
+
+    // 注意事项2：我们也可以明确的写上 return
+    // 写上return 关键字，但是后面什么内容都没有的时候，也是返回undefined
+    function bar() {
+      console.log("bar函数被执行");
+      return;
+    }
+
+    var result1 = bar()
+    console.log("bar的返回值：", result1);
+
+    // 注意事项3：如果在函数执行到return关键字时，函数会立即停止执行，退出函数
+    function baz() {
+      console.log("hello baz");
+      return
+      console.log("hello world");
+    }
+    baz()
+
+  </script>
+
+</body>
+</html>

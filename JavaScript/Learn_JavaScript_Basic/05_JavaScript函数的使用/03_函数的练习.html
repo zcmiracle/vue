@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    // 传入宽高，返回面积
+    function getRectangleArea(width, height) {
+      return width * height
+    }
+
+    var area1 = getRectangleArea(20, 30)
+    var area2 = getRectangleArea(50, 60)
+    console.log("area1:", area1);
+    console.log("area2:", area2);
+
+
+    // 练习3：传入半径radius，计算圆形的面积
+    function getCircleArea(radius) {
+      return Math.PI * radius * radius
+    }
+
+    var area3 = getCircleArea(10)
+    var area4 = getCircleArea(100)
+    console.log("area3:", area3);
+    console.log("area4:", area4);
+
+    // 传入数字n，计算对1~n的数字进行计算
+    function sum(n) {
+      if (n < 0) {
+        console.log(`您传入的${n}是有问题的`);
+        return
+      }
+
+      var total = 0
+      for (var i = 0; i <= n; i ++) {
+        total += i
+      }
+
+      return total
+    }
+
+    var res1 = sum(10)
+    var res2 = sum(100)
+    console.log(`res1: ${res1}, res2: ${res2}`);
+
+    var res3 = sum(-10)
+    console.log(`res3：`, res3);
+
+  </script>
+
+
+</body>
+</html>
