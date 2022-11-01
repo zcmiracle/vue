@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var rand = Math.floor(Math.random() * 100)
+    alert(rand)
+
+    var success = false
+    var count = 6
+
+    for (var i = 0; i < count; i++) {
+      // 获取用户的输入
+      var inputNum = Number(prompt("请输入您猜测的数字:"))
+      
+      // 和randomNum进行比较
+      if (inputNum === rand) {
+        alert("恭喜您，猜对了")
+        success = true
+        break
+      } else if (inputNum > rand) {
+        alert("大了")
+      } else if (inputNum < rand) {
+        alert("小了")
+      }
+
+      if (i === count - 1) {
+        alert("您的次数用完了")
+      }
+    }
+
+
+</script>
+
+</body>
+</html>
