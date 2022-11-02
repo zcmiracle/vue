@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+
+    function pow1(x, n) {
+      return x ** n
+    }
+
+    function pow2(x, n) {
+      var res = 1
+      for (var i = 0; i < n; i++) {
+        res *= x
+      }
+      return res
+    }
+
+    console.log(pow2(2, 3))
+    console.log(pow2(3, 3))
+
+    // 缺点：递归实现方式
+    // 缺点：写出来的代码非常简洁
+    function pow(x, n) {
+      return x * pow(x, n-1)
+    }
+
+    console.log(pow(2, 3))
+    console.log(pow(3, 3))
+
+  </script>
+  
+</body>
+</html>

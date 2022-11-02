@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+
+    function bar() {
+      console.log("bar函数被执行了");
+      console.log("------------");
+    }
+
+    function foo() {
+      console.log("foo函数执行");
+      console.log("James");
+
+      // 调用自己定义的函数
+      bar()
+    
+      console.log("other coding");
+    }
+
+    foo()
+
+  </script>
+  
+</body>
+</html>
