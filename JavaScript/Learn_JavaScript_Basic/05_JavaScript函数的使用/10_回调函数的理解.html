@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    
+    // 回调函数的概念理解
+    function foo(fn) {
+      fn()
+    }
+
+    function bar() {
+      console.log("bar函数被执行了");
+    }
+    foo(bar)
+
+    // 函数回调的案例
+    function request(url, callback) {
+      console.log("根据URL向服务器发送网络请求");
+      console.log("需要花费比较长的时间拿到对应的结果");
+      var list = ["Objective-C", "Swift", "C++", "Java", "Flutter", "JavaScript"]
+      callback(list)
+    }
+
+    // 传入的函数是没有名字的，匿名函数
+    request("url", function(res) {
+      console.log("在handleResult中拿到结果:", res);
+    })
+
+
+  </script>
+
+
+</body>
+</html>
