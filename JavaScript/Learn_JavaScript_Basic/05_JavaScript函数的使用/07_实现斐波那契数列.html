@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    function fibonacci(n) {
+      if (n === 1 || n === 2) return 1
+      return fibonacci(n-1) + fibonacci(n-2)
+    }
+
+    function fibonacci(n) {
+      if (n === 1 || n === 2) return 1
+      var n1 = 1
+      var n2 = 1
+      var res = 0
+      for (var i = 3; i <= n; i++) {
+        res = n1 + n2;
+        n1 = n2;
+        n2 = res
+      }
+      return res
+    }
+    
+    console.log(fibonacci(5))
+    console.log(fibonacci(10))
+    console.log(fibonacci(20))
+
+  </script>
+
+</body>
+</html>

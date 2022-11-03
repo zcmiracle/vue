@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    // 函数做为头等公民
+    var foo1 = function() {
+      console.log("foo1函数被执行");
+    }
+    foo1()
+
+    // 函数在变量之间来回传递
+    var foo2 = foo1
+    foo2()
+
+    // 函数可以做为另外一个函数的参数
+    function bar(fn) {
+      console.log("fn:", fn);
+      fn()
+    }
+    bar(foo1)
+
+    // 函数做为另外一个函数的返回值
+    function sayHello() {
+      function hi() {
+        console.log("hello James");
+      }
+      return hi
+    }
+
+    var fn = sayHello()
+    fn()
+
+
+    // 将函数存储在另外一个数据结构中
+    var obj = {
+      name: "James",
+      eating: function() {
+        console.log("eating");
+      }
+    }
+
+    obj.eating()
+
+    function bar1() {
+      console.log("bar1函数被执行");
+    }
+    function bar2() {
+      console.log("bar2函数被执行");
+    }
+    function bar3() {
+      console.log("bar3函数被执行");
+    }
+
+    // 事件总线的封装
+    var fns = [bar1, bar2, bar3]
+
+  </script>
+
+</body>
+</html>
