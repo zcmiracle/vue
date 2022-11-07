@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- 基本使用 -->
+    <h2>{{ message }}</h2>
+    <h2>{{ message }}, 你好</h2>
+    <h2>{{ firstName + lastName }}</h2>
+    <h2>{{ firstName + 'NBA' + lastName }}</h2>
+    <h2>{{ firstName}} {{lastName }}</h2>
+
+    <!-- 表达式 -->
+    <h2>{{ counter * 2}}</h2>
+    
+    <!-- 三元运算符 -->
+    <h2>{{ age >= 18 ? "成年人" : "未成年人" }}</h2>
+
+    <!-- 调用methods中函数 -->
+    <h2>{{ formatDate(time) }}</h2>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    // 创建app
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world',
+          firstName: '张三',
+          lastName: '李四',
+          counter: 100,
+          age: 16,
+          time: 123456
+        }
+      },
+      methods: {
+        formatDate(date) {
+          return "2022-11-07-" + date
+        }
+      },
+    })
+
+    // 挂载app
+    app.mount("#app")
+  </script>
+
+
+</body>
+
+</html>
