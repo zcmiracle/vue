@@ -19,20 +19,26 @@
 <body>
 
   <div id="app">
-    <h2>{{url}}</h2>
+    <h2>{{ url }}</h2>
     <h2 v-html="url"></h2>
     
   </div>
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world',
-        url: '<a href="https://www.baidu.com">百度一下</a>'
-      }
+
+    // 创建app
+    const app = Vue.createApp({
+      data() {
+        return {
+          url: '<a href="https://www.baidu.com">百度一下</a> <span style="color: red; font-size: 30px;">哈哈哈</span>'
+        }
+      },
     })
+
+    // 挂载app
+    app.mount("#app")
+
   </script>
 
 
