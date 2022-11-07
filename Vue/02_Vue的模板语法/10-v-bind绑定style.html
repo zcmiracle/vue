@@ -31,12 +31,18 @@
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world',
-        finalSize: 20,
-        finalColor:'red',
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world',
+          finalSize: 20,
+          finalColor:'red',
+          obj: {
+            fontSize: '50px',
+            color: "green"
+          }
+        }
       },
       methods: {
         getStyles: function () {
@@ -44,6 +50,8 @@
         }
       },
     })
+
+    app.mount("#app")
   </script>
 
 
