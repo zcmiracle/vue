@@ -1,0 +1,84 @@
+<!--
+ * @Author: Fearless 489368600@qq.com
+ * @Date: 2022-08-03 14:45:16
+ * @LastEditors: Fearless 489368600@qq.com
+ * @LastEditTime: 2022-08-03 14:58:14
+ * @FilePath: /vue/LearnVuejs01/03-动态绑定属性/02-v-bind动态绑定class对象语法.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .active {
+      color: red
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="app">
+
+    <!-- 基本绑定 -->
+    <h2 :class="message">Hello World</h2>
+
+    <!-- 动态class可以写对象语法 -->
+    <button :class=" isActive ? 'active' : '' " @click="btnClick" >我是按钮</button>
+
+    <!-- 对象语法的基本使用 -->
+    <button :class="{ active: isActive}" @click="btnClick">我是按钮</button>
+
+    <!-- 对象语法的多个键值对 -->
+    <button :class="{ active: isActive, flag: true, James: false }" @click="btnClick">我是按钮</button>
+
+    <!-- 动态绑定的class是可以和普通的class同时的使用 -->
+    <button class="abc cba bca" :class="{ active: isActive, flag: true, James: false }" @click="btnClick">我是按钮</button>
+
+    <!-- 动态绑定的class是可以和普通的class同时的使用 -->
+    <button class="abc cba bca" :class="getDynamicClasses()" @click="btnClick">我是按钮</button>
+
+
+    <!-- 动态class可以写数组语法 -->
+    <h2 :class="['abc', 'cba', 'bac']">你好，James</h2>
+    <h2 :class="['abc', className]">你好，James</h2>
+    <h2 :class="['abc', className, isActive? 'active':'']">你好，James</h2>
+    <h2 :class="['abc', className, { active: isActive}]">你好，James</h2>
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world',
+          isActive: true,
+          className: "James"
+        }
+      },
+      methods: {
+        btnClick: function () {
+          this.isActive = !this.isActive
+        },
+        
+        getDynamicClasses: function () {
+          return { active: this.isActive, line: this.isLine }
+        }
+      },
+    })
+
+    app.mount("#app")
+  </script>
+
+</body>
+
+</html>
