@@ -11,18 +11,29 @@
 <body>
 
   <div id="app">
-    <h2>{{message}}</h2>
-    <h2 v-once>{{message}}</h2>
+    <h2 v-once>{{counter}}</h2>
+    <h1>{{message}}</h1>
+    <button @click="changeMessage">改变message</button>
   </div>
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world'
-      }
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world',
+          counter: 100
+        }
+      },
+      methods: {
+        changeMessage() {
+          this.message = "James",
+          this.counter++,
+          console.log(this.message, this.counter);
+        }
+      },
     })
+    app.mount("#app")
   </script>
 
 
