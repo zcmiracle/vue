@@ -1,11 +1,3 @@
-<!--
- * @Author: Fearless 489368600@qq.com
- * @Date: 2022-08-03 13:58:33
- * @LastEditors: Fearless 489368600@qq.com
- * @LastEditTime: 2022-08-03 14:05:55
- * @FilePath: /vue/LearnVuejs01/02-插值操作/06-v-cloak指令的使用.html
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,22 +15,25 @@
 
 <body>
 
-  <div id="app" v-cloak>
-    <h2>{{message}}</h2>
+  <div id="app">
+    <h2 v-cloak>{{message}}</h2>
   </div>
 
   <script src="../js/vue.js"></script>
   <script>
     // vue解析之前，div中有一个属性v-cloak
     // vue解析之后，div中没有一个属性v-cloak
-    setTimeout(function () {
-      const app = new Vue({
-        el: '#app',
-        data: {
-          message: '你好'
-        }
-      })
+    setTimeout(() => {
+      const app = Vue.createApp({
+        data() {
+          return {
+            message: "Hello James"
+          }
+        },
+      })  
+      app.mount("#app")
     }, 1000);
+
   </script>
 
 </body>
