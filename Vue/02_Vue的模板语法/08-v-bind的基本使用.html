@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- 错误的写法 -->
+    <!-- <img src="{{imgURL}}" alt=""> -->
+
+    <div>
+      <button @click="switchImage">切换图片</button>
+    </div>
+
+    <!-- 绑定img的src属性 -->
+    <img v-bind:src="showImgUrl" alt="">
+    
+    <!-- 语法糖 -->
+    <img :src="showImgUrl" alt="">
+
+    <a v-bind:href="href">百度一下1</a>
+    <a :href="href">百度一下2</a>
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          imageUrl1: "http://p1.music.126.net/agGc1qkogHtJQzjjyS-kAA==/109951167643767467.jpg",
+          imageUrl2: "http://p1.music.126.net/_Q2zGH5wNR9xmY1aY7VmUw==/109951167643791745.jpg",
+          showImgUrl: "http://p1.music.126.net/_Q2zGH5wNR9xmY1aY7VmUw==/109951167643791745.jpg",
+          href: "http://www.baidu.com",
+        }
+      },
+      methods: {
+        switchImage: function() {
+          this.showImgUrl = this.showImgUrl === this.imageUrl1 ? this.imageUrl2: this.imageUrl1
+        }
+      },
+    })
+
+    app.mount("#app")
+  </script>
+
+</body>
+
+</html>
