@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-</head>
 
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+  </style>
+
+</head>
 <body>
 
   <div id="app">
-    <h2>{{ url }}</h2>
-    <h2 v-html="url"></h2>
-    
+    <div class="box" @click="divClick">
+      <button @click.stop="btnClick">按钮</button>
+    </div>
   </div>
 
   <script src="../js/vue.js"></script>
   <script>
-
     // 创建app
     const app = Vue.createApp({
       data() {
         return {
-          url: '<a href="https://www.baidu.com">百度一下</a> <span style="color: red; font-size: 30px;">哈哈哈</span>'
+          message: "Hello James"
+        }
+      },
+      methods: {
+        btnClick(event) {
+          console.log("btnClick");
+        },
+        divClick(event) {
+          console.log("divClick");
         }
       },
     })
 
     // 挂载app
     app.mount("#app")
-
   </script>
 
-
 </body>
-
 </html>

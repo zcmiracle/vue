@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="app">
+    <button @click="btn1Click">按钮1</button>
+
+    <button @click="btn2Click('Lebron James', age)">按钮2</button>
+
+    <button @click="btn3Click('Lebron James', age, $event)">按钮3</button>
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "James",
+          age: 38
+        }
+      },
+
+      methods: {
+        // 绑定事件的时候，如果没有传递任何参数，那么event对象会被默认传递过来
+        // 默认参数 event 对象
+        btn1Click(event) {
+          console.log("btn1Click", event);
+        },
+
+        // 明确参数
+        btn2Click(name, age) {
+          console.log("btn2Click", name, age);
+        },
+
+        // 明确参数 + event 对象
+        btn3Click(name, age, event) {
+          console.log("btn3Click", name, age, event);
+        },
+        
+      },
+    })
+
+    app.mount("#app")
+
+  </script>
+
+</body>
+</html>
