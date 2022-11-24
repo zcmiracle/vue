@@ -13,32 +13,32 @@
   <div id="app">
     <!-- 修饰符：lazy -->
     <input type="text" v-model.lazy="message">
-    <h2>{{message}}</h2>
+    <h2>{{ message }}</h2>
 
     <!-- 修饰符：number -->
     <input type="number" v-model.number="age">
-    <h2>{{age}}-{{typeof age}}</h2>
+    <h2>{{ age }}-{{ typeof age }}</h2>
 
     <!-- 修饰符：trim -->
     <input type="text" v-model.trim="name">
-    <h2>您输入的名字是：{{name}}</h2>
+    <h2>您输入的名字是：{{ name }}</h2>
 
   </div>
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world',
-        age: 88,
-        name: '', 
-      }
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world',
+          age: 88,
+          name: '', 
+        }
+      },
     })
 
-    // var age = 0
-    // age = '123'
-    // age = '456'
+    app.mount("#app")
 
   </script>
 

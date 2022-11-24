@@ -11,6 +11,7 @@
 <body>
 
   <div id="app">
+
     <!-- 选择1个 -->
     <select name="abc" v-model="fruit">
       <option value="苹果">苹果</option>
@@ -18,7 +19,7 @@
       <option value="橘子">橘子</option>
       <option value="桃子">桃子</option>
     </select>
-    <h2>您选择的水果是：{{fruit}}</h2>
+    <h2>您选择的水果是：{{ fruit }}</h2>
 
     <!-- 选择多个 -->
     <select name="abc" v-model="fruits" multiple>
@@ -27,23 +28,25 @@
       <option value="橘子">橘子</option>
       <option value="桃子">桃子</option>      
     </select>
-    <h2>您选择的水果是：{{fruits}}</h2>
+    <h2>您选择的水果是：{{ fruits }}</h2>
+  
   </div>
 
   <script src="../js/vue.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
+    const app = Vue.createApp({
+     data() {
+      return {
         message: 'hello world',
         fruit: '香蕉',
         fruits: []
       }
+     },
     })
+    app.mount("#app")
   </script>
-
 
 </body>
 

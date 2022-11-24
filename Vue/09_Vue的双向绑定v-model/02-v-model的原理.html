@@ -20,10 +20,12 @@
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world'
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world'
+        }
       },
       methods: {
          valueChange(event) {
@@ -31,6 +33,8 @@
          }
       },
     })
+    app.mount("#app")
+    
   </script>
 
 

@@ -22,15 +22,23 @@
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world',
-        gender: '女'
-      }
-    })
-  </script>
 
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: 'hello world',
+          gender: '女'
+        }
+      },
+      methods: {
+        valueChange(event) {
+          this.message = event.target.value;
+        }
+      },
+    })
+    app.mount("#app")
+
+  </script>
 
 </body>
 
