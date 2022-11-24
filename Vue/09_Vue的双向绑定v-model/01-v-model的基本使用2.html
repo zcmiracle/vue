@@ -12,9 +12,14 @@
 
   <div id="app">
     
-    <input type="text" :value="message" @input="inputChange">
+    <!-- 1、手动实现了双向绑定 -->
+    <!-- v-bind + v-on -->
+    <!-- <input type="text" :value="message" @input="inputChange"> -->
 
+    <!-- 2、v-model实现双向绑定 -->
+    <input type="text" v-model="message">
 
+    <!-- 登录功能 -->
     <label for="account">
       帐号:<input id="account" type="text" v-model="account">
     </label>
