@@ -11,7 +11,7 @@
 <body>
 
   <div id="app">
-    <cpn></cpn>
+    <!-- <cpn></cpn>
     <cpn></cpn>
     <cpn></cpn>
   </div>
@@ -19,41 +19,72 @@
   <div id="app2">
     <cpn></cpn>
     <cpn></cpn>
-    <cpn></cpn>
+    <cpn></cpn> -->
+
+    <product-item></product-item>
+    <product-item></product-item>
+    <product-item></product-item>
+    
   </div>
+
+  <template id="item">
+    <div class="product">
+      <h2>我是商品</h2>
+      <div>商品图片</div>
+      <div>商品价格：<span>￥9.9</span></div>
+      <p>商品描述信息，9.9秒杀</p>
+    </div>
+  </template>
 
   <script src="../js/vue.js"></script>
   <script>
-    // 1、创建组件构造器
-    const cpnC = Vue.extend({
-      template: `
-        <div>
-          <h2>我是标题</h2>
-          <p>这里是内容，哈哈哈哈</p>
-        </div>
-      `
+    // // 1、创建组件构造器
+    // const cpnC = Vue.extend({
+    //   template: `
+    //     <div>
+    //       <h2>我是标题</h2>
+    //       <p>这里是内容，哈哈哈哈</p>
+    //     </div>
+    //   `
+    // })
+
+    // // 2、注册组件(全局组件，以为这可以在多个Vue的实例下面使用)
+    // // 怎么注册的组件才是局部组件?????
+    // Vue.component('cpn', cpnC)
+
+    // const app = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     message: 'hello world'
+    //   },
+    //   component: {
+    //     // cpn 使用组件时的标签名
+    //     // 局部组件
+    //     cpn: cpnC
+    //   }
+    // })
+
+    // const app2 = new Vue({
+    //   el: '#app2'
+    // })
+
+    /*
+      1.通过app.component(组件名称, 组件的对象)
+      2.在App组件的模板中, 可以直接使用product-item的组件
+    */
+
+    // 组件：App组件（根组件）
+    const App = {}
+
+    // 创建app
+    const app = Vue.createApp(App)
+
+    // 注册一个全局组件
+    app.component("product-item", {
+      template: "#item"
     })
 
-    // 2、注册组件(全局组件，以为这可以在多个Vue的实例下面使用)
-    // 怎么注册的组件才是局部组件?????
-    Vue.component('cpn', cpnC)
-
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: 'hello world'
-      },
-      component: {
-        // cpn 使用组件时的标签名
-        // 局部组件
-        cpn: cpnC
-      }
-    })
-
-    const app2 = new Vue({
-      el: '#app2'
-    })
-
+    app.mount("#app")
 
   </script>
 
