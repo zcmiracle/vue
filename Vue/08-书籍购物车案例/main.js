@@ -1,5 +1,3 @@
-
-
 const app = Vue.createApp({
   data() {
     return {
@@ -32,43 +30,45 @@ const app = Vue.createApp({
           price: 128.00,
           count: 1
         },
-      ]
+      ],
+      // 把这句话漏掉了
+      currentIndex: 0
     }
   },
   methods: {
+    formatPrice(price) {
+      return "￥" + price
+    },
     increment(index) {
       this.books[index].count++
     },
     decrement(index) {
       this.books[index].count--
     },
-    removeHandle(index) {
+    removeBook(index) {
       this.books.splice(index, 1)
+    },
+    rowClick(index) {
+      this.currentIndex = index
     }
   },
   computed: {
     totalPrice() {
       let totalPrice = 0
-    
-      // for (let i = 0; i < this.books.length; i++) {
-      //   totalPrice += this.books[i].price * this.books[i].count
-      // }
-
-      // for (let i in this.books) {
-      //   totalPrice += this.books[i].price * this.books[i].count
-      // }
 
       for (let book of this.books) {
         totalPrice += book.price * book.count
       }
       return totalPrice
     },
-    filters: {
-      showPrice(price) {
-        return '￥' + price.toFixed(2)
-      }
-    }
-  }
+    
+  //   filters: {
+  //     showPrice(price) {
+  //       return '￥' + price.toFixed(2)
+  //     }
+  //   }
+  
+}
 })
 
 app.mount("#app")

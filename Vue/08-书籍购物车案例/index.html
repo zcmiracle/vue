@@ -13,40 +13,54 @@
 <body>
 
   <div id="app">
-    <div v-if="books.length">
+    <template v-if="books.length">
       <table>
         <thead>
-          <th></th>
-          <th>书籍名称</th>
-          <th>出版日期</th>
-          <th>价格</th>
-          <th>购买数量</th>
-          <th>操作</th>
+          <tr>
+            <th>序号</th>
+            <th>书籍名称</th>
+            <th>出版日期</th>
+            <th>价格</th>
+            <th>购买数量</th>
+            <th>操作</th>
+          </tr>
         </thead>
         <tbody>
-          <tr v-for="(item, index) in books">
-            <td>{{item.id}}</td>
-            <td>{{item.name}}</td>
-            <td>{{item.date}}</td>
-            <td>{{item.price | showPrice}}</td>
+          <tr v-for="(item, index) in books" 
+              :key="item.id"
+              @click="rowClick(index)"
+              :class="{ active: index === currentIndex }">
+            <td>{{ index + 1 }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ formatPrice(item.price) }}</td>
             <td>
-              <button @click:="decrement(index)" :disabled="item.count <= 1">-</button>
-              {{item.count}}
+              <button @click="decrement(index)" :disabled="item.count <= 1">-</button>
+              {{ item.count }}
               <button @click="increment(index)">+</button>
             </td>
             <td>
-              <button @click="removeHandle(index)">移除</button>
+              <button @click="removeBook(index, item)">移除</button>
             </td>
           </tr>
         </tbody>
       </table>
-      <h2>总价格：{{totalPrice | showPrice}}</h2>
-    </div>
-    <h2 v-else>购物车为空</h2>
+      <h2>总价格：{{ formatPrice(totalPrice) }}</h2>
+    </template>
+
+     <template v-else>
+      <h1>购物车为空, 请添加喜欢的书籍~</h1>
+      <p>商场中有大量的IT类的书籍, 请选择添加学习, 注意保护好自己的头发!</p>
+    </template>
+   
   </div>
   <script src="../js/vue.js"></script>
   <script src="main.js"></script>
 
+
+
 </body>
+
+decrement
 
 </html>
