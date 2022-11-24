@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h2>{{getFullName()}}</h2>
+    <h2>{{getFullName()}}</h2>
+    <h2>{{getFullName()}}</h2>
+
+    <h2>{{ getScoreLevel() }}</h2>
+
+    <!-- 反转单词显示文本 -->
+    <h2>{{ reverseMessage() }}</h2>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+ 
+    const app = Vue.createApp({
+      data() {
+        return {
+          firstName: "Lebron",
+          lastName: "James",
+          score: 90,
+          message: "my name is jack"
+        }
+      },
+
+      methods: {
+        getFullName() {
+          return this.firstName + "" + this.lastName
+        },
+        getScoreLevel() {
+          return this.score >= 60 ? "及格" : "不及格"
+        },
+        reverseMessage() {
+          return this.message.split(" ").reverse().join(" ")
+        }
+      },
+    })
+
+    app.mount("#app")
+
+
+  </script>
+
+
+</body>
+
+</html>
