@@ -19,20 +19,25 @@
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        counter: 0,
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          counter: 0,
+        }
       },
-      method: {
+      methods: {
         increment() {
           this.counter++
         },
         decrement() {
           this.counter--
         }
-      }
+      },
     })
+
+    app.mount("#app")
+    
   </script>
 
 

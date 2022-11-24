@@ -31,11 +31,13 @@
 
   <script src="../js/vue.js"></script>
   <script>
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: '你好',
-        abc: 123
+
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: '你好',
+          abc: 123
+        }
       },
       methods: {
         btn1Click() {
@@ -49,6 +51,9 @@
         }
       },
     })
+
+    app.mount("#app")
+
   </script>
 
 
