@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div id="app">
+    <h2>{{ message }}</h2>
+    <button @click="changeMessage">修改message</button>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "Vue",
+          info: { name: "James", age: 38 }
+        }
+      },
+      methods: {
+        changeMessage() {
+          this.message = "React",
+          this.info = { name : "Jack" }
+        }
+      },
+      watch: {
+        message(newValue, oldValue) {
+          console.log("message数据发生了变化: ", newValue, oldValue);
+        },
+        info(newValue, oldValue) {
+          // 如果是对象类型，那么拿到的事代理对象
+          console.log("info数据发生了变化: ", newValue, oldValue);
+          console.log(newValue.name, oldValue.name);
+          // 获取原生对象
+          console.log(Vue.toRaw(newValue));
+        }
+      }
+    })
+    app.mount("#app")
+  </script>
+</body>
+</html>

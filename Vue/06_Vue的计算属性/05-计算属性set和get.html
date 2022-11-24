@@ -24,47 +24,29 @@
         }
       },
       computed: {
-        get: function() {
-          return this.firstName + " " + this.lastName
-        },
-        set: function() {
-          const names = value.split(" ")
-          this.firstName = names[0]
-          this.lastName = names[1]
+        // 语法糖写法
+        // fullName() {
+        //   return this.firstName + " " + this.lastName
+        // }
+        fullName: {
+          get: function() {
+            return this.firstName + " " + this.lastName
+          },
+          set: function(newValue) {
+            const names = newValue.split(" ")
+            this.firstName = names[0]
+            this.lastName = names[1]
+          }
         }
       },
       methods: {
         setFullName() {
-          this.fullname = "Lerbon James"
+          this.fullName = "Lerbon James"
         }
       },
     })
     app.mount("#app")
 
-    // const app1 = new Vue({
-    //   el: '#app',
-    //   data: {
-        // firstName: 'LeBron',
-        // lastName: 'James'
-    //   },
-    //   // fullName: function () {
-    //   //   return this.firstName + ' ' + this.lastName 
-    //   // },
-    //   // name: 'Fearlss',
-    //   // 计算属性一般没有set方法，只读属性
-    //   computed: {
-    //     fullName: {
-    //       set: function(newValue) {
-    //         const names = newValue.split(' ');
-    //         this.firstName = names[0];
-    //         this.lastName = names[1];
-    //       },
-    //       get: function () {
-    //         return this.firstName + ' ' + this.lastName; 
-    //       }
-    //     },
-    //   }
-    // })
   </script>
 
 
