@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <!-- 1.直接拼接，语法过于繁琐 -->
+    <!-- <h2>{{firstName}} {{lastName}}</h2> -->
+
+    <!-- 2.通过定义methods -->
+    <h2>{{ getFullName() }}</h2>
+    <h2>{{ getFullName() }}</h2>
+    <h2>{{ getFullName() }}</h2>
+
+    <!-- 3.通过computed -->
+    <h2>{{ fullname }}</h2>
+    <h2>{{ fullname }}</h2>
+    <h2>{{ fullname }}</h2>
+
+    <button @click="changeLastName">修改lastName</button>
+
+  </div>
+
+  <script src="../js/vue.js"></script>
+
+  <script>
+   const app = Vue.createApp({
+     data() {
+      return {
+        firstName: "LeBron",
+        lastName: "James",
+      }
+     },
+     methods: {
+      getFullName() {
+        console.log("getFullName ---");
+      },
+      changeLastName() {
+        this.lastName = "Mike"
+      }
+     },
+     computed: {
+      fullname() {
+        console.log("computed fullname ---");
+        return this.firstName + " " + this.lastName
+      }
+     }
+   })
+
+   app.mount("#app")
+  </script>
+
+
+</body>
+
+</html>
