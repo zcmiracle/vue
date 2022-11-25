@@ -15,52 +15,64 @@
   
   <div id="app">
     <!-- 全局组件语法糖 -->
-    <cpn1></cpn1> 
-    <!-- 局部组件语法糖 -->
-    <cpn2></cpn2>
+    <cpn-item></cpn-item> 
   </div>
+
+
+
+  <template id="cpn1">
+    <div class="cpn1">
+      <h2>{{message}}</h2>
+      <p>我是内容，哈哈哈</p>
+
+       <!-- 局部组件语法糖 -->
+      <cpn2-item></cpn2-item>  
+    </div>
+  </template>
+
+  <!-- 局部组件 -->
+  <template id="cpn2">
+    <div class="cpn2">
+      <h2>{{title}}</h2>
+      <p>我是内容，呵呵呵</p>
+    </div>
+  </template>
 
   <script src="../js/vue.js"></script>
   <script>
-    // 1、全局组件注册的语法糖
-    // 1、创建组件构造器
-    // const cpn1 = Vue.extend({
-    //   template: `
-    //     <div>
-    //       <h2>我是标题</h2>
-    //       <p>我是内容，哈哈哈</p>  
-    //     </div>
-    //   `
-    // })
 
-    // const cpn1 = Vue.extend()
-    // 2、注册组件
-    Vue.component('cpn1', {
-      template: `
-        <div>
-          <h2>我是标题</h2>
-          <p>我是内容，哈哈哈</p>  
-        </div>
-      `
+    const app = Vue.createApp({
+      data() {
+        return {
+          message: "你好啊"
+        }
+      },
     })
 
-    // 2、注册局部组件的语法糖
-    const app = new Vue({
-      el: '#app',
-      data: {
-        message: '你好啊'
-      },
-      components: {
-        'cpn2': {
-          template: `
-            <div>
-              <h2>我是标题</h2>
-              <p>我是内容，呵呵呵</p>
-            </div>
-          `
+    // 局部组件
+    const Cpn2Item = {
+      template: "#cpn2",
+      data() {
+        return {
+          title: "我是局部组件",
         }
       }
+    }
+
+    // 注册全局组件
+    app.component("cpn-item", {
+      template: "#cpn1",
+      components: {
+        Cpn2Item
+      },
+      data() {
+        return {
+          message: "我是全局组件"
+        }
+      },
     })
+       
+    app.mount("#app")
 
   </script>
 
