@@ -1,4 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue/dist/vue.esm-bundler'
 
-createApp(App).mount('#app')
+import App from './components/App.vue'
+import ProductItem from "./components/ProductItem.vue"
+
+// createApp(App).mount('#app')
+
+const app = createApp(App)
+
+// 全局注册
+// app.component("product-item", ProductItem)
+
+app.mount("#app")
