@@ -1,6 +1,7 @@
 
 .video_list {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -11,6 +12,13 @@
   width: 212px;
   margin-bottom: 20px;
 }
+
+.video_item:nth-last-child(-n+3) {
+  border: 1px solid red;
+  /* align-self: flex-start; */
+  justify-self: flex-start;
+}
+
 
 .video_item .album {
   position: relative;
@@ -30,6 +38,7 @@
 
   display: flex;
   justify-content: space-between;
+
   align-items: center;
 
   height: 22px;
