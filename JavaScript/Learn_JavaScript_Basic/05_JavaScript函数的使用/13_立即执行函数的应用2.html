@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="btn">按钮1</button>
+  <button class="btn">按钮2</button>
+  <button class="btn">按钮3</button>
+  <button class="btn">按钮4</button>
+
+  <script>
+
+    debugger
+    
+    // 使用立即执行函数
+    var btnEls = document.querySelectorAll(".btn")
+    for (var i = 0; i < btnEls.length; i++) {
+      var btn = btnEls[i];
+      (function(m) {
+        btn.onclick = function() {
+          console.log(`按钮${m+1}发生了点击`);
+        }
+      })(i)
+    }
+
+    console.log(i);
+
+  </script>
+
+</body>
+</html>

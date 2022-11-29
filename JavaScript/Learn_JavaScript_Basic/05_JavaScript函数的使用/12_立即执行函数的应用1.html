@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script src="../js/mj.js"></script>
+  <script src="../js/xm_util.js"></script>
+  <script src="../js/xiaoming.js"></script>
+
+  <script>
+
+    // 应用场景1：防止全局变量的命名冲突
+
+    // 立即执行函数 和 普通的代码有什么区别？
+    // 在立即执行函数中定义的变量是有自己的作用域的
+    (function() {
+      var message = "Hello"
+    })()
+
+  </script>
+
+</body>
+</html>
