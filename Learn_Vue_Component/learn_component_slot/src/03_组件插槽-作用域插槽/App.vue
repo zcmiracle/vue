@@ -6,15 +6,16 @@
     <!-- 2.展示内容 -->
     <h1>{{ pageContents[currentIndex] }}</h1>
 
-
-    <tab-control :title="['衣服', '鞋子', '裤子']"
+    <!-- tab-control：button -->
+    <tab-control :titles="['衣服', '鞋子', '裤子']" 
                  @tab-item-click="tabItemClick">
       <template v-slot:default="props">
         <button>{{ props.item }}</button>
       </template>
     </tab-control>
 
-    <tab-control :title="['衣服', '鞋子', '裤子']"
+    <!-- tab-control：a元素 -->
+    <tab-control :titles="['衣服1', '鞋子', '裤子']"
                  @tab-item-click="tabItemClick">
       <template #default="props">
         <a href="#">{{ props.item }}</a>
@@ -23,7 +24,7 @@
 
 
     <!-- 独占默认插槽的简写 -->
-    <tab-control :title="['衣服', '鞋子', '裤子']"
+    <tab-control :titles="['衣服', '鞋子', '裤子']"
                  @tab-item-click="tabItemClick">
       <template v-slot="props">
         <button>{{ props.item }}</button>
@@ -31,7 +32,7 @@
     </tab-control>
 
     <!-- 只有一个插槽，那么template可以省略 -->
-    <tab-control :title="['衣服', '鞋子', '裤子']"
+    <tab-control :titles="['衣服', '鞋子', '裤子']"
                  @tab-item-click="tabItemClick"
                  v-slot="props">
       <button>{{ props.item }}</button>
@@ -62,7 +63,6 @@
   }
 
 </script>
-
 
 
 <style scoped>
