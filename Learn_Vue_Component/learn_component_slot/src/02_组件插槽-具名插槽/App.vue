@@ -15,6 +15,7 @@
   </nav-bar>
 
 
+  <!-- nav-ba 只给一个插槽传入数据 -->
   <nav-bar>
     <template v-slot:[position]>
       <a href="#">注册</a>

@@ -7,7 +7,6 @@
   </div>
 </template>
 
-
 <script>
   export default {
     props: {
@@ -18,7 +17,6 @@
     }
   }
 </script>
-
 
 <style scope>
 </style>
