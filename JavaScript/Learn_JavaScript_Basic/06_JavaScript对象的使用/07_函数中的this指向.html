@@ -13,6 +13,40 @@
     // 函数中是有一个this的变量，this变量大多数情况下会指向一个对象
     // arguments 保存的是传入的所有参数
 
+    // 1、如果普通的函数被默认调用，那么this指向的就是 window
+    function foo(name, name) {
+      console.log(arguments)
+      console.log(this);
+    }
+    foo("James", 38)
+
+    function sayHello(name) {
+      console.log(this);
+    }
+    sayHello();
+
+    // 2、如果函数它是被某一个对象来引用并调用它，那么this会指向这个对象
+    // 也就是调用的那个调用
+    var obj = {
+      name: "James",
+      running: function() {
+        console.log(this);
+        console.log(this === obj);
+      }
+    }
+    obj.running()
+
+
+    function bar() {
+      console.log(this); // obj对象
+    }
+
+    var obj = {
+      name: "MJ",
+      bar: bar
+    }
+    obj.bar()
+
     
   
 
