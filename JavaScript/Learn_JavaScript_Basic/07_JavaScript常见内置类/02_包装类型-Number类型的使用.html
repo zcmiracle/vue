@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // Number构造函数 - window.Number
+
+    // 类属性
+    // Number中本身是有自己的属性
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+
+    // integer 整数
+    console.log(Number.MAX_SAFE_INTEGER);
+    console.log(Number.MIN_SAFE_INTEGER);
+
+    // 对象的方法
+    var num = 10000
+    console.log(num.toString(), typeof num.toString());
+    console.log(num.toString(2));
+    console.log(num.toString(8));
+    console.log(num.toString(16));
+
+    // toFixed的使用
+    var pi = 3.1415926
+    console.log(pi.toFixed(3));
+
+    // 类的方法
+    // parseInt
+    // parseFloat
+    // 整数: 123
+    // 浮点数：小数 123.123
+    var num1 = "456.234"
+    console.log(Number(num1).toFixed(0));
+    console.log(Number.parseInt(num1));
+    console.log(Number.parseFloat(num1));
+
+    // window上面
+    console.log(parseInt(num1));
+    console.log(parseInt(num1));
+
+    function ZCNumber() {
+
+    }
+    ZCNumber.parseInt2 = function() {
+
+    }
+    window.parseInt2 = ZCNumber.parseInt2
+    console.log(window.parseInt2 === ZCNumber.parseInt2);
+
+    console.log(parseInt === Number.parseInt);
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var name = "James MJ"
+    var height = 2.0333333
+
+    // function String(str) {
+    //   this.str = str;
+    //   this.height = 11
+    //   this.split = function() {
+
+    //   }
+    // }
+
+    // 调用原始类型的属性和方法时。内部的操作 name = new String(name)
+    console.log(name.length);
+    console.log(name.split(" "));
+    console.log(height.toFixed(2));  // 保留2位
+
+
+    // 原始类型默认也是可以手动创建对象(object)
+    var name1 = new String("MJ Jordan")
+    console.log(typeof name, typeof name1);
+    
+  </script>
+</body>
+</html>
