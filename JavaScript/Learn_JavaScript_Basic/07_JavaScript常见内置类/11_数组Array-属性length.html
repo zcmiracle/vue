@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var names = ["12", "23", "34", "45", "56", "67"]
+
+    // 属性length
+    console.log(names.length);
+
+    // names.length = 10;
+    // console.log(names.length);
+
+    // 设置length小于原来元素的个数
+    // names.length = 0
+    // console.log(names);
+
+    // 数组的遍历
+    for (var i = 0; i < names.length; i++) {
+      console.log(names[i]);
+    }
+
+    // for in
+    for (var index in names) {
+      console.log(index, names[index]);
+    }
+
+    // for of
+    for (var item of names) {
+      console.log(item);
+    }
+
+  </script>
+</body>
+</html>
