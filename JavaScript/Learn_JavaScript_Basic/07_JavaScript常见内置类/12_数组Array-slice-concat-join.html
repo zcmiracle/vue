@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    var names = ["12", "23", "34", "45", "56", "67"]
+
+    // slice：不会修改原有的数组
+    // splice：修改原有的数组
+    // start 从什么位置开始
+    // end 结束位置，不包含end
+    var newNames = names.slice(2, 4) // 不会修改原来的数组
+    // var newNames = names.splice(2, 4) 
+    console.log(newNames);
+    
+
+    // concat：将多个数组拼接一起
+    var names1 = ["A", "B"]
+    var names2 = ["C", "D"]
+    var names3 = ["E", "F"]
+    var newNames1 = names1.concat(names2, names3)
+    console.log(newNames1);
+
+
+    // join方法：字符串 sllit
+    console.log(names.join("-"));
+
+
+  </script>
+</body>
+</html>
