@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 判断一个字符串中是否有另外一个字符串
+    // indexof(searchString, fromIndex)
+
+    // index 搜索到，搜索字符串所在索引位置
+    // index 没有搜索到，返回  -1
+
+    var message = "my name is James"
+    var name = "James"
+    var index = message.indexOf(name)
+    if (message.indexOf(name) !== -1) {
+      console.log("message中包含了name");
+    } else {
+      console.log("message中没有包含name");
+    }
+
+    // includes：ES6新增，判断包含关系
+    if (message.includes(name)) {
+      console.log("message 中包含了name");
+    }
+
+    // startsWith: 是否以xxx开头
+    if (message.startsWith("my")) {
+      console.log("message以my开头");
+    }
+
+    // endsWith: 是否以xxx结束
+    if (message.endsWith("James")) {
+      console.log("message以James结束");
+    }
+
+    // replace 替换字符串
+    var newMessage = message.replace("James", "MJ")
+    console.log(message);
+    console.log(newMessage);
+    
+    var newName = "Jack"
+    var newMessage = message.replace("James", function() {
+      return newName.toUpperCase()
+    })
+    console.log(newMessage);
+
+  </script>
+</body>
+</html>
