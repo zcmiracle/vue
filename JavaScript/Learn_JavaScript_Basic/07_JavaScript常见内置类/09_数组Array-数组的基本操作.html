@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    // 增删改查
+    var names = ["123", "456", "789"]
+    console.log(names[0]);
+    console.log(names.at(0));
+
+    console.log(names[-1]);
+    console.log(names.at(-1));
+
+    // 修改数组中的元素
+    names[0] = "James"
+    console.log(names);
+
+    // 增加数组元素
+    names[3] = "MJ"
+    names[10] = "Mike"
+    console.log(names);
+
+    // 删除数组中的元素
+    delete names[1]
+    console.log(names);
+    console.log(names[1]);
+    
+
+  </script>
+</body>
+</html>
