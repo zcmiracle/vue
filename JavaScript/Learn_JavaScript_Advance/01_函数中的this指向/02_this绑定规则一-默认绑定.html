@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    
+    // 定义函数
+    // 普通函数被独立的调用
+    function foo() {
+      console.log("foo:", this);
+    }
+    foo()
+
+
+    // 函数定义在对象中，但是独立调用你】
+    var obj = {
+      name: "James",
+      bar: function() {
+        console.log("bar: ", this);
+      }
+    }
+
+    var baz = obj.bar
+    baz()
+
+    
+    // 高阶函数
+    function test(fn) {
+      fn()
+    }
+    test(obj.bar)
+
+    // 严格模式下，独立调用的函数中的this指向的是 undefined
+
+  </script>
+
+
+</body>
+</html>
