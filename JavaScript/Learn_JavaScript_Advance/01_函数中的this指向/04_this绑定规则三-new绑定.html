@@ -14,7 +14,13 @@
     // 将this指向这个空对象
     // 执行函数体中代码
     // 没有显示返回非空对象时，默认返回这个对象
-    
+
+    function foo() {
+      this.name = "James"
+      console.log("foo函数：", this);
+    }
+
+    new foo()
 
   </script>
   
