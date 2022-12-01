@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var message = "my name is Jack"
+
+    // 获取子字符串 重点
+    console.log(message.slice(3, 7));
+    console.log(message.slice(3, -1));
+    console.log(message.slice(3));
+
+    // subStr
+    console.log(message.substr(3, 7));
+
+
+    var str1 = "Hello"
+    var str2 = "world"
+    var str3 = "MJ"
+
+    // 字符串拼接 +
+    var newString = str1 + str2 + str3
+    console.log(newString);
+
+    // concat方法：链式调用
+    var newString2 = str1.concat(str2).concat(str3)
+    var newString3 = str1.concat(str2, str3, "123", "456")
+    console.log(newString2);
+    console.log(newString3);
+
+    // 删除首尾的空格
+    console.log("        my name is    ".trim());
+
+    // 字符串切割
+    var message3 = "abc-qwe-rty-zcx"
+    var items = message3.split("-")
+    var newMessage = items.join("*")
+    console.log(newMessage);
+
+
+
+  </script>
+</body>
+</html>

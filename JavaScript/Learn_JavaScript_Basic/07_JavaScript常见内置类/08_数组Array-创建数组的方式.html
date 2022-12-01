@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var names = ["qwe", "ads", "zxc"]
+    var product = {name : "apple", price: 10000}
+    var products = [
+      {name : "oppo", price: 10000},
+      {name : "huawei", price: 8000},
+      {name : "xiaomi", price: 8000},
+      product
+    ]
+
+    // 创建方式2：类Array
+    var array1 = new Array()
+    var array2 = new Array("123", "456", "789")
+    console.log(array1, array2);
+
+    // 传入了一个数字，它默认会当成我们要创建一个对应长度的数组
+    var array3 = new Array(5)
+    console.log(array3, array3[0]);
+    var array4 = [5]
+
+    // 通过索引访问元素
+    console.log(names[0]);
+    console.log(names[names.length - 1]);
+  
+  </script>
+</body>
+</html>
