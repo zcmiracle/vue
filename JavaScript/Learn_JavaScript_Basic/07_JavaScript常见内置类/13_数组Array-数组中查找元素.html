@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /**
+     * indexOf 方式
+     * 手动for循环
+     * 数组find方法
+    */
+
+    // 数组中存放的是原始类型
+    var names = ["A", "B", "C", "D"]
+
+    // indexOf
+    // 找到，返回对应的索引
+    // 没有找到，返回 -1
+    console.log(names.indexOf("C"));
+
+    // 数组中存放的是对象类型
+    var students = [
+      { id: 100, name: "MJ", "age": 18},
+      { id: 101, name: "Mike", "age": 28},
+      { id: 102, name: "James", "age": 38},
+      { id: 103, name: "Jack", "age": 30},
+    ]
+
+    var stu = null
+    for (var i = 0; i < students.length; i ++) {
+      if (students[i].id === 102) {
+        stu = students[i]
+        break
+      }
+    }
+
+    if (stu) {
+      console.log("找打对应的101学生", stu);
+    } else {
+      console.log("没有找到对应的101学生");
+    }
+
+    // find方法：高阶
+    var students2 = [
+      { id: 100, name: "MJ", "age": 18},
+      { id: 101, name: "Mike", "age": 28},
+      { id: 102, name: "James", "age": 38},
+      { id: 103, name: "Jack", "age": 30},
+    ]
+
+    var stu2 = students2.find(function(item) {
+      if (item.id === 101) return true
+    })
+    console.log(stu2);
+
+
+  </script>
+</body>
+</html>
