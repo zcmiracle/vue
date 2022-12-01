@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+
+  <div class="box">box盒子</div>
+  <p>我是内容</p>
+
+  <script src="js/test.js"></script>
+  <button>修改box</button>
+
+  <script>
+
+    var boxEl = document.querySelector(".box")
+    var btnEl = document.querySelector("button")
+    btnEl.onclick = function() {
+      // boxEl.remove()
+      btnEl.style.height = "200px"
+      btnEl.style.width = "200px"
+    }
+
+    function sum(num1, num2) {
+      return num1 + num2
+    }
+    sum(10, 20)
+    sum(20, 30)
+    sum("abc", "qwe")
+
+  </script>
+  
+</body>
+</html>
