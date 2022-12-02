@@ -38,6 +38,51 @@
     })
     console.log(newNum3);
 
+    // reduce 
+    var nums4 = [11, 20, 55, 100, 88, 32]
+    var result = 0;
+    for (var item of nums4) {
+      result += item
+    }
+    console.log(result);
+
+    var result1 = nums4.reduce(function(preValue, item) {
+      console.log(`preValue:${preValue} item:${item}`);
+      return preValue + item
+    }, 0)
+    console.log(result1);
+
+    // reduce練習
+    var products = [
+      { name: "鼠标", price: 88, count: 3 },
+      { name: "键盘", price: 200, count: 2 },
+      { name: "耳机", price: 9.9, count: 10 },
+    ]
+    var totalPrice = products.reduce(function(preValue, item) {
+      return preValue + item.price * item.count
+    }, 0)
+    console.log(totalPrice);
+  
+    // 综合练习
+    var nums5 = [11, 20, 55, 100, 88, 32]
+
+    // 过滤所有的偶数，映射所有偶数的平方，并且计算他们的和
+    var total = nums5.filter(function(item) {
+      return item % 2 === 0
+    }).map(function(item) {
+      return item * item
+    }).reduce(function(preValue, item) {
+      return preValue + item
+    }, 0)
+    console.log(total);
+
+    // 🐂
+    var total2 = nums5.filter(item => item % 2 === 0)
+                      .map(item => item * item)
+                      .reduce((preValue, item) => preValue + item, 0)
+
+    console.log(total); 
+
   </script>
 </body>
 </html>
