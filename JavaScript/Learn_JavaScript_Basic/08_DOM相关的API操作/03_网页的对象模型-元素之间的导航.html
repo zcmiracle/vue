@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- 我是注释，哈哈哈 -->
+  我是文本内容，哈哈哈
+
+  <div class="box">哈哈哈哈哈</div>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  
+  <script>
+    var boxEl = document.body
+    // 根据body元素去获取子元素 element
+    var childElements = bodyEl.children
+    console.log(childElements);
+
+    // 获取box元素
+    var boxEl1 = bodyEl.firstElementChild
+    var boxEl2 = bodyEl.children[0]
+    console.log(boxEl1, boxEl2, boxEl1 === boxEl2);
+
+    // 获取ul元素
+    var ulEl = boxEl1.nextElementSibling
+    console.log(ulEl);
+
+    // 获取li元素
+    var liEls = ulEl.children
+    console.log(liEls);
+
+
+  </script>
+
+
+</body>
+</html>
