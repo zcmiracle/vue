@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var names = ["abc", "cba", "nba", "mba"]
+    
+    // 三種方式，第一種方式
+    names.forEach(function(item) {
+      console.log(item, this);
+    }, {name: "James"})
+
+    // filter 過濾
+    var nums = [11, 20, 55, 100, 88, 32]
+    // for 循環實現
+    var newNames = []
+    for (var item of nums) {
+      if (item % 2 === 0) {
+        newNames.push(item)
+      }
+    }
+
+    // filter實現
+    var newNum2 = nums.fill(function(item) {
+      return item % 2 === 0
+    })
+    console.log(newNum2);
+
+    // map函數：映射
+    var nums3 = [11, 20, 55, 100, 88, 32]
+    var newNum3 = nums3.map(function(item) {
+      return item * item
+    })
+    console.log(newNum3);
+
+  </script>
+</body>
+</html>

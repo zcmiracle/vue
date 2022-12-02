@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    var names = ["12", "23", "34", "45"]
+
+    // forEach 函数：可以遍历数组
+    for (var i = 0; i < names.length; i ++) {
+      console.log(names[i]);
+    }
+
+    // MJForEach
+    function MJForEach(fn) {
+      for (var i = 0; i < names.length; i ++) {
+        fn(names[i], i, names);
+      }
+    }
+
+    // MJForEach(function(item, index, names) {
+    //   console.log("---", item, index, names);
+    // }) 
+
+    // MJForEach版本2
+    MJForEach(function(item, index, names) {
+      console.log("---", item, index, names)
+    }, names)
+
+    MJForEach(function(item, index, names) {
+      console.log("---", item, index, names)
+    }, [123, 345, 567, 888])
+
+    // MJForEach版本3
+    names.MJForEach = function(fn) {
+      for (var i = 0; i < this.length; i ++) {
+        fn(this[i], i, this)
+      }
+    }
+
+    names.MJForEach(function(item, index, names) {
+      console.log(item, index, names);
+    })
+
+    names.forEach(function(item, index, names) {
+      console.log(item, index, names);
+    })
+
+    // MJForEach 版本4
+    Array.prototype.MJForEach = function(fn, thisArgs) {
+      for (var i = 0; i < this.lengthl; i ++) {
+        fn(this[i], i, this);
+      }
+    }
+
+    names.MJForEach(function(item, index, names) {
+      console.log(item, index, names);
+    })
+
+
+  </script>
+</body>
+</html>

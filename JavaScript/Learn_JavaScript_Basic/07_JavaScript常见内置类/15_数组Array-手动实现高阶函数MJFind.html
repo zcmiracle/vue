@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    var names = ["12", "23", "34", "45"]
+
+    // 原生find方法
+    var findName = names.find(function (item, index, array) {
+      console.log(item, index, array);
+      return item === "23"
+    })
+    console.log(findName);
+
+    // 数组中对象类型的查找
+    var students = [
+      { id: 100, name: "James", age: 18 },
+      { id: 101, name: "MJ", age: 30 },
+      { id: 102, name: "Jack", age: 25 },
+      { id: 103, name: "Mike", age: 22 }
+    ]
+
+    var findStu = students.find(function(item) {
+      return item.id === 101
+    })
+    console.log(findStu);
+
+    // 自己實現MJFind
+    Array.prototype.MJFind = function(fn) {
+      var item = undefined
+      for (var i = 0; i < this.length; i ++) {
+        var isFlag = fn(this[i], i, this)
+        if (isFlag) {
+          // item = this[i]
+          // break
+          return this[i]
+        }
+      }
+    }
+
+    var findStu2 = students.MJFind(function(item, index, array) {
+      console.log(item);
+      return item.id === 101
+    })
+    console.log(findStu2);
+
+  </script>
+</body>
+
+</html>

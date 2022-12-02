@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var nums = [20, 4, 10, 15, 100, 88]
+
+    // sort 排序
+    nums.sort(function(item1, item2) {
+      // item1 和 item2 進行比較
+      // 返回是 整數
+      // 誰小誰在前
+      return item1 - item2
+    })
+    console.log(nums);
+    console.log(nums.reverse());
+
+    var students = [
+      { id: 100, name: "James", age: 18 },
+      { id: 101, name: "MJ", age: 30 },
+      { id: 102, name: "Jack", age: 25 },
+      { id: 103, name: "curry", age: 22 }
+    ]
+    students.sort(function(item1, item2) {
+      return item1.age - item2.age
+    })
+    console.log(students);
+
+  </script>
+</body>
+</html>
