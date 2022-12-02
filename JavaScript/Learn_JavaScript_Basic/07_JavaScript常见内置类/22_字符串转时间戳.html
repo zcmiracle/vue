@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var timeString = "12/23/2023"
+    var timeString1 = "12/23/2023"
+
+    // 方式1
+    var date = new Date(timeString)
+    var timestamp = date.getTime();
+    console.log(timestamp);
+
+    // 方式2
+    var timestamp1 = Date.parse(timeString1)
+    console.log(timestamp1);
+
+  </script>
+</body>
+</html>

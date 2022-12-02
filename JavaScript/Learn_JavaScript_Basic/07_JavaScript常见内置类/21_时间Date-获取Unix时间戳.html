@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var date = new Date()
+    var date2 = new Date("2030-12-12")
+
+    // 方法1： 当前时间戳
+    var timestamp1 = Date.now()
+    console.log(timestamp1);
+
+    // 方法2/3 将一个date对象转成时间戳
+    var timestamp2 = date.getTime()
+    var timestamp3 = date.valueOf()
+    console.log(timestamp2, timestamp3);
+
+    // 方法4
+    console.log(+date);
+
+    // 计算这个操作所花费的时间
+    var startTime = Date.now()
+    for (var i = 0; i < 10000; i ++) {
+      console.log(i);
+    }
+
+    var endTime = Date.now()
+    console.log("执行10000次for循环的打印所消耗的时间:", endTime - startTime);
+
+    // 封装函数
+    function testPerformance(fn) {
+      var startTime = Date.now()
+      fn()
+      var endTime = Date.now()
+    }
+
+  </script>
+</body>
+</html>

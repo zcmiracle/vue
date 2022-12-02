@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    // Date对象创建方式
+    // 没传入任何的参数，获取当前的时间
+    var date1 = new Date()
+    console.log(date1);
+
+    // 时间字符串
+    var date2 = new Date("2022-12-01")
+    console.log(date2);
+
+    // 传入具体的年月日时分秒
+    var date3 = new Date(2033, 12, 02, 09, 08, 07, 333)
+    console.log(date3)
+
+    // 传入一个 Unix 时间戳
+    var date4 = new Date(10005333423)
+    console.log(date4);
+
+  </script>
+
+</body>
+</html>

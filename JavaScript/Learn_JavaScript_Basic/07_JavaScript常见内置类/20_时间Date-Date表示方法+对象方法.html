@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var date = new Date()
+    console.log(date);
+    // console.log(date.toDateString())
+    // console.log(date.toISOString()) // 
+    
+
+    // 1、获取想要的时间信息
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var day = date.getDate()
+    var hour = date.getHours()
+    var minute = date.getMinutes()
+    var second = date.getSeconds()
+
+    console.log(year, month, day, hour, minute, second);
+    console.log(`${year}/${month}/${day} ${hour}:${minute}:${second}`);
+
+    var weekday = date.getDay() // 一周中的第几天
+    console.log(weekday);
+
+    // 给date设置时间
+    date.setFullYear(2030)
+    date.setDate(33)
+    console.log(date);
+
+
+
+
+
+
+  </script>
+</body>
+</html>
