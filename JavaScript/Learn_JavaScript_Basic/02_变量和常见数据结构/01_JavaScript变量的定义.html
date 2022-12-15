@@ -18,8 +18,27 @@
     // age = 40
     // height = 1.90
 
-    var name = "James", age = 30, height = 2.13
-    console.log(name, age, height);
+    // var name = "James", age = 30, height = 2.13
+    // console.log(name, age, height);
+
+
+
+    let namelist = []
+    var name = "深圳市南山区消费保网络科技有限公司"
+    let prefix = "深圳市"
+    if (name.startsWith(prefix)) {
+      // 从 prefix 开始
+      const nameSub = name.substring(prefix.length) // 南山区消费保网络科技有限公司
+      namelist.push(nameSub)
+      console.log(nameSub)
+
+    } else {
+      namelist.push(name)
+      console.log(name)
+    }
+
+    // console.log(namelist)
+
 
   </script>
 
