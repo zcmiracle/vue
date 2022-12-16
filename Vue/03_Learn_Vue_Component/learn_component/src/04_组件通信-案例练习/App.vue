@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app"> 
     <!-- 1.tab-control -->
     <tab-control :titles="['衣服', '鞋子', '裤子']"
                  @tab-item-click="tabItemClick"/>
