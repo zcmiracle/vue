@@ -20,10 +20,10 @@
 import tabBarData from "@/assets/data/tabBar.js"
 import { getAssetURL } from "@/utils/load_assets.js"
 import { ref } from "vue";
-import { useRouter } from "vue-router";
+import  { useRouter } from "vue-router";
 
 const currentIndex = ref(0)
-const router = useRouter
+const router = useRouter() // 忘记写了
 const itemClick = (index, item) => {
   currentIndex.value = index
   router.push(item.path)
