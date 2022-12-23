@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup>   
 
 import tabBarData from "@/assets/data/tabBar.js"
 import { getAssetURL } from "@/utils/load_assets.js"

@@ -1,5 +1,6 @@
 :root {
   --primary-color: #ff9854;
+  --line-color: #faf8f9;
 
   /* 全局修改：任何地方只要用到了-van-tabbar-item-icon-size都会被修改掉 */
   /* --van-item-icon-size：30px */
@@ -7,4 +8,17 @@
 
 body {
   font-size: 14px;
+}
+
+.top-page {
+  position: relative;
+  z-index: 9;
+  height: 100vh;
+  background-color: #fff;
+
+  overflow-y: auto;
+}
+
+.bottom-gray-line {
+  border-bottom: 1px solid var(--line-color);
 }
