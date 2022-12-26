@@ -17,6 +17,7 @@
         </template>
       </van-tabs>
     </div>
+    
     <div class="content">
       <template v-for="(value, key, index) in allCities">
         <!-- <h2 v-show="tabActive === key">{{ value.title }}</h2> -->
@@ -31,7 +32,7 @@ import { ref, computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import useCityStore from "@/stores/modules/city";
-import CityGroup from "./components/city-group.vue"
+import CityGroup from "./components/city-group.vue";
 
 const router = useRouter();
 // 搜索框功能
@@ -54,6 +55,12 @@ const currentGroup = computed(() => allCities.value[tabActive.value])
 </script>
 
 <style lang="less" scoped>
+
+.top {
+  position: relative;
+  z-index: 9;
+}
+
 .banner {
   img {
     width: 100%;
