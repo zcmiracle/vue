@@ -19,6 +19,7 @@
     </div>
     <div class="content">
       <template v-for="(value, key, index) in allCities">
+        <!-- <h2 v-show="tabActive === key">{{ value.title }}</h2> -->
         <city-group v-show="tabActive === key" :group-data="value" />
       </template>
     </div>
@@ -30,6 +31,7 @@ import { ref, computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useRouter } from "vue-router";
 import useCityStore from "@/stores/modules/city";
+import CityGroup from "./components/city-group.vue"
 
 const router = useRouter();
 // 搜索框功能
@@ -46,8 +48,8 @@ const cityStore = useCityStore();
 cityStore.fetchAllCitiesData();
 const { allCities } = storeToRefs(cityStore);
 
-// 获取选中标签后的数据
-const currentGroup = allCities.value[tabActive.value]
+// 获取选中标签后的数据 computed 作用是响应式
+const currentGroup = computed(() => allCities.value[tabActive.value])
 
 </script>
 
