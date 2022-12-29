@@ -1,5 +1,6 @@
 <template>
   <div class="city-group">
+    <!-- sticky 吸顶效果 -->
     <van-index-bar :sticky="false" :index-list="indexList">
       <van-index-anchor index="热门" />
       <div class="list">
@@ -51,6 +52,29 @@ const cityClick = (city) => {
 </script>
 
 <style lang="less" scoped>
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+  // 控制每个元素的间距，上下左右
+  gap: 4px; // 牛啊牛啊
+  // justify-content: space-between;
+  // padding: 10px;
+  // padding-right: 25px;
+
+  .city {
+    width: 70px;
+    height: 28px;
+    border-radius: 14px;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+    line-height: 28px;
+    background-color: #fff4ec;
+    padding: 10px 0;
+  }
+}
 
 </style>
 

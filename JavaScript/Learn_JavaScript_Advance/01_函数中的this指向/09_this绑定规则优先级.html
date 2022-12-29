@@ -27,6 +27,33 @@
     }
     obj.baz()
 
+    // 2.new绑定优先级高于隐式绑定
+    var obj1 = {
+      name: "James",
+      foo: function() {
+        console.log("foo:", this)
+        console.log("foo:", this === obj)
+      }
+    }
+
+    // 3、new显式
+    // new不可以和 apply/call一起使用
+
+    // new的优先级高于bind
+    // function bind() {
+    //   console.log("foo:", this)
+    // }
+
+    // var bindFn = foo.bind("MJ")
+    // new bindFn()
+
+    // 4、bind/apply优先级
+    function foo2() {
+      console.log("foo2:", this)
+    }
+    var bindFn = foo2.bind("MJ")
+    bindFn.call("MJ")
+
   </script>
 </body>
 </html>
