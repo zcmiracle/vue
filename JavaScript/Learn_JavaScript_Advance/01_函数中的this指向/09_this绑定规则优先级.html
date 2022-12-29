@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function foo() {
+      console.log("foo", this);
+    }
+
+    // 比较优先级
+    // 1、显示绑定 绑定的优先级  高于 隐式绑定
+    var obj = { foo: foo }
+    obj.foo.apply("abc")
+    obj.foo.call("abc")
+
+    // bind高于默认绑定
+    var bar = foo.bind("aaa")
+    var obj = {
+      name: "James",
+      baz: bar
+    }
+    obj.baz()
+
+  </script>
+</body>
+</html>
