@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>身高</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>James</td>
+        <td>38</td>
+        <td>2.03</td>
+      </tr>
+      <tr>
+        <td>MJ</td>
+        <td>50</td>
+        <td>1.98</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    var tableEl = document.body.firstElementChild
+    // 通过table元素获取内部的后台元素
+    console.log(tableEl.tHead, tableEl.tBodies, tableEl.tFoot)
+    console.log(tableEl.rows)
+
+    // 拿到第一行
+    var rowEl = tableEl.rows[2]
+    console.log(rowEl.cells[0])
+    console.log(rowEl.sectionRowIndex)
+    console.log(rowEl.rowIndex)
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <form action="">
+    <input type="account" type="text">
+    <input type="password" type="password">
+    <input type="hobbies" type="checkout" checked>
+    <select name="fruits">
+      <option value="apple">苹果</option>
+      <option value="orange">橘子</option>
+    </select>
+  </form>
+
+  <script>
+    
+    // 1.获取form
+    // var formEl = document.body.firstElementChild
+    var formEl = document.forms[0]
+
+    // 2.获取form中的子元素
+    var inputEl = formEl.elements.account
+    setTimeout(function() {
+      console.log(inputEl.value)
+    }, 5000)
+
+  </script>
+
+
+</body>
+</html>

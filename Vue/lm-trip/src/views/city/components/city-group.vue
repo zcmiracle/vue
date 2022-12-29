@@ -52,25 +52,6 @@ const cityClick = (city) => {
 </script>
 
 <style lang="less" scoped>
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-  padding-right: 25px;
-
-  .city {
-    width: 70px;
-    height: 28px;
-    border-radius: 14px;
-    font-size: 12px;
-    color: #000;
-    text-align: center;
-    line-height: 28px;
-    background-color: #fff4ec;
-    margin: 6px 0;
-  }
-}
 
 </style>
 
