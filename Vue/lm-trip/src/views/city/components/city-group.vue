@@ -22,7 +22,7 @@
 <script setup>
 import { computed } from "vue";
 import { useRouter } from "vue-router";
-import useCityStore from "@/store/modules/city";
+import useCityStore from "@/stores/modules/city"; // 绝了，stores
 
 const props = defineProps({
   groupData: {
@@ -37,7 +37,6 @@ const indexList = computed(() => {
   list.unshift("#")
   return list
 })
-
 
 // 监听城市点击
 const router = useRouter()
