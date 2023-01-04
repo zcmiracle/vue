@@ -56,7 +56,7 @@ const cityClick = (city) => {
 .list {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  // border: 1px solid black;
   // 控制每个元素的间距，上下左右
   gap: 4px; // 牛啊牛啊
   // justify-content: space-between;

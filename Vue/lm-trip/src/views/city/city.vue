@@ -30,11 +30,11 @@
 <script setup>
 import { ref, computed } from "vue";
 import { storeToRefs } from "pinia";
-// import { useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 import useCityStore from "@/stores/modules/city";
 import CityGroup from "./components/city-group.vue";
 
-// const router = useRouter();
+const router = useRouter();
 // // 搜索框功能
 const searchValue = ref("");
 const cancelClick = () => {
