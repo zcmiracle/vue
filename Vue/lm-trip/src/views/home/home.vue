@@ -40,7 +40,7 @@ homeStore.fetchHouseListData()
 
 <style lang="less" scoped>
 .home {
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
 .banner {

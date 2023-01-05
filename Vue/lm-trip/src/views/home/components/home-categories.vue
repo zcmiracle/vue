@@ -39,7 +39,8 @@ const { categories } = storeToRefs(homeStore)
     width: 70px;
     text-align: center;
 
-    .img {
+    // 重点
+    img {
       width: 32px;
       height: 32px;
     }
@@ -48,7 +49,6 @@ const { categories } = storeToRefs(homeStore)
       font-size: 12px;
       margin-top: 8px;
     }
-
   }
 }
 

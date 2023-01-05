@@ -72,4 +72,3 @@ const { allCities } = storeToRefs(cityStore);
   overflow-y: auto;
 }
 </style>
-``
