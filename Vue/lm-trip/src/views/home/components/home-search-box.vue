@@ -174,7 +174,8 @@ const { hotSuggests } = storeToRefs(homeStore);
 
 .section {
   display: flex;
-  flex-wrap: warp;
+  // 让弹性盒元素在必要的时候拆行：
+  flex-wrap: wrap;
   align-items: center;
   padding: 0 20px;
   color: #999;
