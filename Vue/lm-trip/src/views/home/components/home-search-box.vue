@@ -115,7 +115,6 @@ const onConfirm = (value) => {
   mainStore.startDate = formatMonthDay(selectStartDate);
   mainStore.endDate = formatMonthDay(selectEndDate);
   stayCount.value = getDiffDays(selectStartDate, selectEndDate);
-const stayCount = ref(getDiffDays(startDate.value, endDate.value))
 
   // 2、隐藏日历
   showCalendar.value = false;
