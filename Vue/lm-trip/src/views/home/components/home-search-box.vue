@@ -119,8 +119,8 @@ const onConfirm = (value) => {
   const selectStartDate = value[0];
   const selectEndDate = value[1];
 
-  mainStore.startDate = formatMonthDay(selectStartDate);
-  mainStore.endDate = formatMonthDay(selectEndDate);
+  mainStore.startDate = selectStartDate;
+  mainStore.endDate = selectEndDate;
   stayCount.value = getDiffDays(selectStartDate, selectEndDate);
 
   // 2、隐藏日历
@@ -132,6 +132,16 @@ const homeStore = useHomeStore();
 const { hotSuggests } = storeToRefs(homeStore);
 
 // 开始搜索
+const searchBtnClick = () => {
+ router.push({
+  path: "/search",
+  query: {
+    startDate: startDate.value,
+    endDate: endDate.value,
+    currentCity: currentCity.value.cityName
+  }
+ })
+}
 
 
 </script>
