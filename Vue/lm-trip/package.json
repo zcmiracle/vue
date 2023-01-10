@@ -13,6 +13,7 @@
     "less": "^4.1.3",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.28",
+    "underscore": "^1.13.6",
     "vant": "^4.0.4",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",

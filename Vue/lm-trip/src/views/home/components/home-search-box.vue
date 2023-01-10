@@ -60,7 +60,7 @@
         </div>
       </template>
     </div>
-
+    
     <!-- 搜索按钮 -->
     <div class="section search-btn">
       <div class="btn" @click="searchBtnClick">开始搜索</div>

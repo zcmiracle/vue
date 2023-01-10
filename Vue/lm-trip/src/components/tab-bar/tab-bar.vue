@@ -1,53 +1,56 @@
 <template>
   <div class="tab-bar">
-    <template v-for="(item, index) in tabBarData">
-      <div 
-        class="tab-bar-item" 
-        :class="{ active: currentIndex === index }"
-        @click="itemClick(index, item)"
-      >
-        <img v-if="currentIndex !== index" :src="getAssetURL(item.image)" alt="">
-        <img v-else :src="getAssetURL(item.imageActive)" alt="">
-        <span class="text">{{ item.text }}</span>
-      </div>
-    </template>
-
+    <van-tabbar v-model="currentIndex" active-color="#ff9854" route>
+      <template v-for="(item, index) in tabBarData">
+        <div
+          class="tab-bar-item"
+          :class="{ active: currentIndex === index }"
+          @click="itemClick(index, item)"
+        >
+          <img
+            v-if="currentIndex !== index"
+            :src="getAssetURL(item.image)"
+            alt=""
+          />
+          <img v-else :src="getAssetURL(item.imageActive)" alt="" />
+          <span class="text">{{ item.text }}</span>
+        </div>
+      </template>
+    </van-tabbar>
   </div>
 </template>
 
-<script setup>   
-
-import tabBarData from "@/assets/data/tabBar.js"
-import { getAssetURL } from "@/utils/load_assets.js"
+<script setup>
+import tabBarData from "@/assets/data/tabBar.js";
+import { getAssetURL } from "@/utils/load_assets.js";
 import { ref } from "vue";
-import  { useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 
-const currentIndex = ref(0)
-const router = useRouter() // 忘记写了
+const currentIndex = ref(0);
+const router = useRouter(); // 忘记写了
 const itemClick = (index, item) => {
-  currentIndex.value = index
-  router.push(item.path)
- }
-
+  currentIndex.value = index;
+  router.push(item.path);
+};
 </script>
- 
+
 <style lang="less" scoped>
 .tab-bar {
   // 这个很关键
-  position: fixed; 
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   height: 50px;
   display: flex;
-  
+
   border-top: 1px solid #f3f3f3;
 
   .tab-bar-item {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 
     &.active {
@@ -62,7 +65,6 @@ const itemClick = (index, item) => {
       font-size: 14px;
       margin-top: 2px;
     }
-  }  
+  }
 }
-
 </style>

@@ -22,14 +22,108 @@
 </template>
 
 <script setup>
-// import useMainStore from '@/stores/module/main'
+import useMainStore from '@/stores/modules/main'
 import { formatMonthDay } from '@/utils/format_date'
-// import { computed } from '@vue/reactivity'
-// import { storeToRefs } from 'pinia';
+import { computed } from '@vue/reactivity'
+import { storeToRefs } from 'pinia';
+
+const mainStore = useMainStore()
+const { startDate, endDate } = storeToRefs(mainStore)
+const startDateStr = computed(() => formatMonthDay(startDate.value, "MM.DD"))
+const endDateStr = computed(() => formatMonthDay(endDate.value, "MM.DD"))
 
 </script>
 
-
 <style lang="less" scoped>
 
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 45px;
+  line-height: 45px;
+
+  padding: 0 10px;
+  font-size: 14px;
+  color: #999;
+
+  border-radius: 6px;
+  background: #f2f4f6;
+
+  .left {
+    font-weight: 500;
+    min-width: 30px;
+    font-size: 14px;
+    padding-right: 6px;
+    margin-right: 5px;
+    border-right: 1px solid red;
+    color: #333;
+    white-space: nowrap;
+  }
+
+  .select-time {
+    display: flex;
+    flex-direction: column;
+
+
+    .item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      line-height: normal;
+      font-size: 10px;
+
+      .name {
+        font-size: 10px;
+      }
+
+      .date {
+        position: relative;
+        color: #333;
+        margin: 0 10px 0 3px;
+        font-weight: 500;
+      }
+
+      .end .date::after {
+        content: " ";
+        width: 0;
+        height: 0;
+        border: 4px solid #666;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: 0px;
+        right: -12px;
+      }
+
+    }
+
+  }
+
+}
+
+
+.content {
+  position: relative;
+  flex: 1;
+  padding: 0 6px;
+  text-align: left;
+  border-left: 1px solid #fff;
+
+  .keyboard { 
+    max-width: 155px;
+    font-size: 12px;
+  }
+
+  .icon-cancel {
+    position: absolute;
+    top: 30%
+  }
+
+
+}
 </style>
